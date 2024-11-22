@@ -1,17 +1,30 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { jostFont } from "../util/font";
+import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
+import { FaBarsStaggered } from "react-icons/fa6";
 
 const Navbar = () => {
+  const [currentPage, setCurrentPage] = useState("");
+  const [open, setOpen] = useState(false);
+
+  useEffect(() => {
+    setCurrentPage(window.location.pathname);
+  }, []);
+
+  const handleNav = () => {
+    setOpen(!open);
+  };
+
   return (
-    <nav>
-      <div className="flex justify-between items-center container mx-auto px-36 py-14">
+    <nav className="relative pb-48 md:pb-0">
+      <div className="flex fixed md:relative w-screen bg-white shadow shadow-[#292F36] md:shadow-none justify-between xl:space-x-10 2xl:space-x-20 items-center xl:px-28 px-10 py-10 md:py-14">
         <div>
           <Link href="/">
             <svg
-              className="max-w-[14.1875rem] w-[6.25rem]"
+              className="lg:w-[14.1875rem] w-[9.375rem]"
               width=""
               height=""
               viewBox="0 0 227 50"
@@ -30,19 +43,96 @@ const Navbar = () => {
           </Link>
         </div>
 
+        {/* Desktop navigation */}
         <div
-          className={`${jostFont.className} flex items-center font-medium space-x-7`}
+          className={`${jostFont.className} md:flex items-center font-medium md:space-x-8 md:px-16 lg:px-0 xl:space-x-10 hidden`}
         >
-          <Link href="/" className="hover:">
-            Home
+          <Link href="/">
+            <motion.h1
+              className={`${
+                currentPage == "/" ? "text-[#C76904]" : "text-[#292F36]"
+              } text-[1.25rem]`}
+              whileHover={{
+                color: "#C76904",
+              }}
+            >
+              Home
+            </motion.h1>
           </Link>
-          <Link href="/about">About</Link>
-          <Link href="/services">Services</Link>
-          <Link href="/projects">Project</Link>
-          <Link href="/blog">Blog</Link>
-          <Link href="/contact">Contact</Link>
-          <Link href="/team">Team</Link>
+          <Link href="/about">
+            <motion.h1
+              className={`${
+                currentPage == "/about" ? "text-[#C76904]" : "text-[#292F36]"
+              } text-[1.25rem]`}
+              whileHover={{
+                color: "#C76904",
+              }}
+            >
+              About
+            </motion.h1>
+          </Link>
+          <Link href="/services">
+            <motion.h1
+              className={`${
+                currentPage == "/services" ? "text-[#C76904]" : "text-[#292F36]"
+              } text-[1.25rem]`}
+              whileHover={{
+                color: "#C76904",
+              }}
+            >
+              Services
+            </motion.h1>
+          </Link>
+          <Link href="/projects">
+            <motion.h1
+              whileHover={{
+                color: "#C76904",
+              }}
+              className={`${
+                currentPage == "/projects" ? "text-[#C76904]" : "text-[#292F36]"
+              } text-[1.25rem]`}
+            >
+              Project
+            </motion.h1>
+          </Link>
+          <Link href="/blog">
+            <motion.h1
+              whileHover={{
+                color: "#C76904",
+              }}
+              className={`${
+                currentPage == "/blog" ? "text-[#C76904]" : "text-[#292F36]"
+              } text-[1.25rem]`}
+            >
+              Blog
+            </motion.h1>
+          </Link>
+          <Link href="/contact">
+            <motion.h1
+              whileHover={{
+                color: "#C76904",
+              }}
+              className={`${
+                currentPage == "/contact" ? "text-[#C76904]" : "text-[#292F36]"
+              } text-[1.25rem]`}
+            >
+              Contact
+            </motion.h1>
+          </Link>
+          <Link href="/team">
+            <motion.h1
+              whileHover={{
+                color: "#C76904",
+              }}
+              className={`${
+                currentPage == "/team" ? "text-[#C76904]" : "text-[#292F36]"
+              } text-[1.25rem]`}
+            >
+              Team
+            </motion.h1>
+          </Link>
           <svg
+            className="cursor-pointer"
             width="23"
             height="23"
             viewBox="0 0 23 23"
@@ -51,8 +141,9 @@ const Navbar = () => {
           >
             <g opacity="0.8">
               <path
+                className="stroke-[#C76904]"
                 d="M16.6843 16.6844L22 22M19.3756 10.1874C19.3756 15.2616 15.2622 19.3749 10.1881 19.3749C5.11399 19.3749 1.00061 15.2616 1.00061 10.1874C1.00061 5.11332 5.11399 0.999939 10.1881 0.999939C15.2622 0.999939 19.3756 5.11332 19.3756 10.1874Z"
-                stroke="#141414"
+                stroke=""
                 strokeWidth="2"
                 strokeLinecap="round"
                 strokeLinejoin="round"
@@ -60,6 +151,155 @@ const Navbar = () => {
             </g>
           </svg>
         </div>
+
+        {/* mobile navtools */}
+        <motion.button
+          onClick={handleNav}
+          className="md:hidden"
+          initial={{ rotate: 0 }}
+          animate={{ rotate: open ? 90 : 0 }}
+          transition={{ duration: 0.3 }}
+        >
+          <FaBarsStaggered size={30} />
+        </motion.button>
+
+        {/* mobile navigation */}
+        <motion.div
+          initial={{ x: "-100%" }}
+          animate={{ x: open ? 0 : "-100%" }}
+          transition={{ type: "spring", stiffness: 300, damping: 30 }}
+          className={`${jostFont.className} flex flex-col items-center bg-white z-10 w-[75vw] border border-r-[#292F36] top-0 h-[100vh] fixed left-0 font-medium space-y-7 md:hidden`}
+        >
+          <ul className="flex flex-col items-center space-y-14 p-36">
+            <li>
+              <Link href="/">
+                <motion.h1
+                  className={`${
+                    currentPage == "/" ? "text-[#C76904]" : "text-[#292F36]"
+                  } text-[1.25rem]`}
+                  whileHover={{
+                    color: "#C76904",
+                  }}
+                >
+                  Home
+                </motion.h1>
+              </Link>
+            </li>
+            <li>
+              <Link href="/about">
+                <motion.h1
+                  className={`${
+                    currentPage == "/about"
+                      ? "text-[#C76904]"
+                      : "text-[#292F36]"
+                  } text-[1.25rem]`}
+                  whileHover={{
+                    color: "#C76904",
+                  }}
+                >
+                  About
+                </motion.h1>
+              </Link>
+            </li>
+            <li>
+              <Link href="/services">
+                <motion.h1
+                  className={`${
+                    currentPage == "/services"
+                      ? "text-[#C76904]"
+                      : "text-[#292F36]"
+                  } text-[1.25rem]`}
+                  whileHover={{
+                    color: "#C76904",
+                  }}
+                >
+                  Services
+                </motion.h1>
+              </Link>
+            </li>
+            <li>
+              <Link href="/projects">
+                <motion.h1
+                  whileHover={{
+                    color: "#C76904",
+                  }}
+                  className={`${
+                    currentPage == "/projects"
+                      ? "text-[#C76904]"
+                      : "text-[#292F36]"
+                  } text-[1.25rem]`}
+                >
+                  Project
+                </motion.h1>
+              </Link>
+            </li>
+            <li>
+              <Link href="/blog">
+                <motion.h1
+                  whileHover={{
+                    color: "#C76904",
+                  }}
+                  className={`${
+                    currentPage == "/blog" ? "text-[#C76904]" : "text-[#292F36]"
+                  } text-[1.25rem]`}
+                >
+                  Blog
+                </motion.h1>
+              </Link>
+            </li>
+            <li>
+              <Link href="/contact">
+                <motion.h1
+                  whileHover={{
+                    color: "#C76904",
+                  }}
+                  className={`${
+                    currentPage == "/contact"
+                      ? "text-[#C76904]"
+                      : "text-[#292F36]"
+                  } text-[1.25rem]`}
+                >
+                  Contact
+                </motion.h1>
+              </Link>
+            </li>
+            <li>
+              <Link href="/team">
+                <motion.h1
+                  whileHover={{
+                    color: "#C76904",
+                  }}
+                  className={`${
+                    currentPage == "/team" ? "text-[#C76904]" : "text-[#292F36]"
+                  } text-[1.25rem]`}
+                >
+                  Team
+                </motion.h1>
+              </Link>
+            </li>
+            <li>
+              <svg
+                className="cursor-pointer"
+                width="23"
+                height="23"
+                viewBox="0 0 23 23"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g opacity="0.8">
+                  <path
+                    className="stroke-[#C76904]"
+                    d="M16.6843 16.6844L22 22M19.3756 10.1874C19.3756 15.2616 15.2622 19.3749 10.1881 19.3749C5.11399 19.3749 1.00061 15.2616 1.00061 10.1874C1.00061 5.11332 5.11399 0.999939 10.1881 0.999939C15.2622 0.999939 19.3756 5.11332 19.3756 10.1874Z"
+                    stroke=""
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </g>
+              </svg>
+            </li>
+          </ul>
+        </motion.div>
       </div>
     </nav>
   );
