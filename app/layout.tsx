@@ -6,13 +6,6 @@ import Navbar from "./components/Navbar";
 export const metadata: Metadata = {
   title: "Selhono",
   description: "Selhono interior designs",
-  icons: {
-    icon: [
-      { url: "/images/selhono-main.png", sizes: "32x32" },
-      { url: "/images/selhono-main.png", sizes: "64x64" },
-      { url: "/images/selhono-main.png", sizes: "180x180" },
-    ],
-  },
 };
 
 export default function RootLayout({
@@ -24,7 +17,7 @@ export default function RootLayout({
     <html lang="en">
       <body className="overflow-x-hidden">
         <Navbar />
-        {children}
+        <main>{children}</main>
       </body>
     </html>
   );

@@ -19,11 +19,12 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="relative pb-48 md:pb-0">
-      <div className="flex fixed md:relative w-screen bg-white shadow shadow-[#292F36] md:shadow-none justify-between xl:space-x-10 2xl:space-x-20 items-center xl:px-28 px-10 py-10 md:py-14">
+    <header className="relative pb-48 md:pb-0">
+      <div className="flex fixed md:relative w-screen bg-white shadow-md justify-between xl:space-x-10 2xl:space-x-20 items-center xl:px-28 px-10 py-7 md:py-14">
         <div>
           <Link href="/">
             <svg
+              aria-label="Homepage"
               className="lg:w-[14.1875rem] w-[9.375rem]"
               width=""
               height=""
@@ -44,7 +45,8 @@ const Navbar = () => {
         </div>
 
         {/* Desktop navigation */}
-        <div
+        <nav
+          aria-label="desktop-navigation"
           className={`${jostFont.className} md:flex items-center font-medium md:space-x-8 md:px-16 lg:px-0 xl:space-x-10 hidden`}
         >
           <Link href="/">
@@ -150,10 +152,11 @@ const Navbar = () => {
               />
             </g>
           </svg>
-        </div>
+        </nav>
 
         {/* mobile navtools */}
         <motion.button
+          aria-controls="mobile-navigation"
           onClick={handleNav}
           className="md:hidden"
           initial={{ rotate: 0 }}
@@ -164,7 +167,9 @@ const Navbar = () => {
         </motion.button>
 
         {/* mobile navigation */}
-        <motion.div
+        <motion.nav
+          id="mobile-navigation"
+          aria-label="mobile-navigation"
           initial={{ x: "-100%" }}
           animate={{ x: open ? 0 : "-100%" }}
           transition={{ type: "spring", stiffness: 300, damping: 30 }}
@@ -279,6 +284,7 @@ const Navbar = () => {
             </li>
             <li>
               <svg
+                aria-hidden="true"
                 className="cursor-pointer"
                 width="23"
                 height="23"
@@ -299,9 +305,9 @@ const Navbar = () => {
               </svg>
             </li>
           </ul>
-        </motion.div>
+        </motion.nav>
       </div>
-    </nav>
+    </header>
   );
 };
 export default Navbar;
