@@ -19,8 +19,8 @@ const Navbar = () => {
   };
 
   return (
-    <header className="relative pb-48 md:pb-0">
-      <div className="flex fixed md:relative w-screen bg-white shadow-md justify-between xl:space-x-10 2xl:space-x-20 items-center xl:px-28 px-10 py-7 md:py-14">
+    <header className="relative pb-24 md:pb-0 z-50">
+      <div className="flex fixed md:relative w-full bg-white shadow-md md:shadow-none justify-between 2xl:justify-center xl:space-x-10 2xl:space-x-72 items-center lg:px-16 xl:px-28 px-7 sm:px-10 py-10 md:py-14">
         <div>
           <Link href="/">
             <svg
@@ -47,13 +47,13 @@ const Navbar = () => {
         {/* Desktop navigation */}
         <nav
           aria-label="desktop-navigation"
-          className={`${jostFont.className} md:flex items-center font-medium md:space-x-8 md:px-16 lg:px-0 xl:space-x-10 hidden`}
+          className={`${jostFont.className} md:flex lg:text-[1.25rem] items-center font-medium md:space-x-7 xl:space-x-10 hidden`}
         >
           <Link href="/">
             <motion.h1
               className={`${
                 currentPage == "/" ? "text-[#C76904]" : "text-[#292F36]"
-              } text-[1.25rem]`}
+              }`}
               whileHover={{
                 color: "#C76904",
               }}
@@ -65,7 +65,7 @@ const Navbar = () => {
             <motion.h1
               className={`${
                 currentPage == "/about" ? "text-[#C76904]" : "text-[#292F36]"
-              } text-[1.25rem]`}
+              }`}
               whileHover={{
                 color: "#C76904",
               }}
@@ -77,7 +77,7 @@ const Navbar = () => {
             <motion.h1
               className={`${
                 currentPage == "/services" ? "text-[#C76904]" : "text-[#292F36]"
-              } text-[1.25rem]`}
+              }`}
               whileHover={{
                 color: "#C76904",
               }}
@@ -92,7 +92,7 @@ const Navbar = () => {
               }}
               className={`${
                 currentPage == "/projects" ? "text-[#C76904]" : "text-[#292F36]"
-              } text-[1.25rem]`}
+              }`}
             >
               Project
             </motion.h1>
@@ -104,7 +104,7 @@ const Navbar = () => {
               }}
               className={`${
                 currentPage == "/blog" ? "text-[#C76904]" : "text-[#292F36]"
-              } text-[1.25rem]`}
+              }`}
             >
               Blog
             </motion.h1>
@@ -116,7 +116,7 @@ const Navbar = () => {
               }}
               className={`${
                 currentPage == "/contact" ? "text-[#C76904]" : "text-[#292F36]"
-              } text-[1.25rem]`}
+              }`}
             >
               Contact
             </motion.h1>
@@ -128,7 +128,7 @@ const Navbar = () => {
               }}
               className={`${
                 currentPage == "/team" ? "text-[#C76904]" : "text-[#292F36]"
-              } text-[1.25rem]`}
+              }`}
             >
               Team
             </motion.h1>
@@ -173,7 +173,7 @@ const Navbar = () => {
           initial={{ x: "-100%" }}
           animate={{ x: open ? 0 : "-100%" }}
           transition={{ type: "spring", stiffness: 300, damping: 30 }}
-          className={`${jostFont.className} flex flex-col items-center bg-white z-10 w-[75vw] border border-r-[#292F36] top-0 h-[100vh] fixed left-0 font-medium space-y-7 md:hidden`}
+          className={`${jostFont.className} flex flex-col items-center text-[1.25rem] bg-white z-10 w-[75vw] border-r top-0 h-[100vh] fixed left-0 font-medium space-y-7 md:hidden`}
         >
           <ul className="flex flex-col items-center space-y-14 p-36">
             <li>
@@ -181,7 +181,7 @@ const Navbar = () => {
                 <motion.h1
                   className={`${
                     currentPage == "/" ? "text-[#C76904]" : "text-[#292F36]"
-                  } text-[1.25rem]`}
+                  }`}
                   whileHover={{
                     color: "#C76904",
                   }}
@@ -197,7 +197,7 @@ const Navbar = () => {
                     currentPage == "/about"
                       ? "text-[#C76904]"
                       : "text-[#292F36]"
-                  } text-[1.25rem]`}
+                  }`}
                   whileHover={{
                     color: "#C76904",
                   }}
@@ -213,7 +213,7 @@ const Navbar = () => {
                     currentPage == "/services"
                       ? "text-[#C76904]"
                       : "text-[#292F36]"
-                  } text-[1.25rem]`}
+                  }`}
                   whileHover={{
                     color: "#C76904",
                   }}
@@ -232,7 +232,7 @@ const Navbar = () => {
                     currentPage == "/projects"
                       ? "text-[#C76904]"
                       : "text-[#292F36]"
-                  } text-[1.25rem]`}
+                  }`}
                 >
                   Project
                 </motion.h1>
@@ -246,7 +246,7 @@ const Navbar = () => {
                   }}
                   className={`${
                     currentPage == "/blog" ? "text-[#C76904]" : "text-[#292F36]"
-                  } text-[1.25rem]`}
+                  }`}
                 >
                   Blog
                 </motion.h1>
@@ -262,7 +262,7 @@ const Navbar = () => {
                     currentPage == "/contact"
                       ? "text-[#C76904]"
                       : "text-[#292F36]"
-                  } text-[1.25rem]`}
+                  }`}
                 >
                   Contact
                 </motion.h1>
@@ -276,7 +276,7 @@ const Navbar = () => {
                   }}
                   className={`${
                     currentPage == "/team" ? "text-[#C76904]" : "text-[#292F36]"
-                  } text-[1.25rem]`}
+                  }`}
                 >
                   Team
                 </motion.h1>
