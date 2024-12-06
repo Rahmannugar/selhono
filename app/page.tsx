@@ -1,5 +1,7 @@
 import Details from "./components/Details";
 import Hero from "./components/Hero";
+import Mart from "./components/Mart";
+import Partner from "./components/Partner";
 import Review from "./components/Review";
 import Work from "./components/Work";
 
@@ -10,6 +12,8 @@ const page = () => {
       <Work />
       <Details />
       <Review />
+      <Partner />
+      <Mart />
     </main>
   );
 };

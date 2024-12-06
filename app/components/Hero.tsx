@@ -17,13 +17,13 @@ const Hero = () => {
       <div className="absolute top-28 md:top-16 left-7 space-y-5">
         <div className={`text-white space-y-2 `}>
           <h1
-            className={`xl:text-[4.063rem] lg:text-[3.438rem] md:text-[2.5rem] text-[1.5rem] leading-[150%] sm:text-[2.188rem] ${dmSerifFont.className}`}
+            className={`xl:text-[4.063rem] lg:text-[3.438rem] md:text-[2.5rem] text-[1.5rem] sm:text-[2.188rem] ${dmSerifFont.className}`}
           >
             Let's make your
             <span className="block">home beautiful together</span>
           </h1>
           <p
-            className={`md:max-w-[29.375rem] max-w-[15.625rem] sm:max-w-[21.875rem] text-sm sm:text-base leading-[150%] md:text-lg lg:text-[1.375rem] ${interFont.className}`}
+            className={`md:max-w-[29.375rem] max-w-[15.625rem] sm:max-w-[21.875rem] text-sm sm:text-base md:text-lg lg:text-[1.375rem] ${interFont.className}`}
           >
             There are many variations of the passages of lorem Ipsum
             fromavailable, majority.

@@ -17,12 +17,12 @@ const Details = () => {
         <div className="absolute top-14 md:top-24 lg:top-36 left-7 text-white">
           <div className="space-y-5">
             <h1
-              className={`${dmSerifFont.className} lg:text-[3.438rem] md:text-[2rem] text-[1.25rem] max-w-[13.75rem] lg:max-w-[23rem] leading-[125%]`}
+              className={`${dmSerifFont.className} lg:text-[3.438rem] md:text-[2rem] text-[1.25rem] max-w-[13.75rem] lg:max-w-[23rem]`}
             >
               We create art for modern life
             </h1>
             <p
-              className={`font-medium ${jostFont.className} lg:text-[1.375rem] text-[0.875rem] md:text-[1rem] max-w-[12.5rem] md:max-w-[20.25rem] leading-[125%]`}
+              className={`font-medium ${jostFont.className} lg:text-[1.375rem] text-[0.875rem] md:text-[1rem] max-w-[12.5rem] md:max-w-[20.25rem]`}
             >
               There are many variations of the passages of lorem Ipsum from
               available, majority.
@@ -57,7 +57,7 @@ const Details = () => {
           </div>
 
           <button
-            className={`${interFont.className} bg-[#CDA274] hover:bg-[#ffe1c1] mt-10 lg:mt-14 duration-200 font-medium ease-in-out rounded-[1.125rem] text-white flex items-center justify-center space-x-2 py-5 lg:py-6 px-7 text-sm md:text-lg`}
+            className={`${interFont.className} bg-[#CDA274] hover:bg-[#ffe1c1] mt-7 sm:mt-10 lg:mt-14 duration-200 font-medium ease-in-out rounded-[1.125rem] text-white flex items-center justify-center space-x-2 py-5 lg:py-6 px-7 text-sm md:text-lg`}
           >
             <h1 id="Get Free Estimate">Get Free Estimate</h1>
 
