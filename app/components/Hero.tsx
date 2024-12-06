@@ -14,7 +14,7 @@ const Hero = () => {
         />
       </div>
 
-      <div className="absolute top-16 left-7 space-y-5">
+      <div className="absolute top-28 md:top-16 left-7 space-y-5">
         <div className={`text-white space-y-2 `}>
           <h1
             className={`xl:text-[4.063rem] lg:text-[3.438rem] md:text-[2.5rem] text-[1.5rem] leading-[150%] sm:text-[2.188rem] ${dmSerifFont.className}`}

@@ -3,7 +3,7 @@ import { dmSerifFont, interFont, jostFont } from "../util/font";
 
 const Details = () => {
   return (
-    <section className="my-20 md:my-28 sm:flex items-center sm:space-x-[-6.25rem] md:space-x-[-7.5rem] lg:space-x-[-10.625rem] xl:space-x-[-15%] 2xl:justify-center">
+    <section className="my-28 md:my-40 sm:flex items-center sm:space-x-[-6.25rem] md:space-x-[-7.5rem] lg:space-x-[-10.625rem] xl:space-x-[-15%] 2xl:justify-center">
       <div className="relative">
         <div className="relative h-[25rem] w-full sm:w-[20rem] md:w-[27rem] md:h-[35rem] lg:w-[36rem] xl:w-[40.813rem] lg:h-[43.75rem]">
           <Image
