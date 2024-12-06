@@ -30,10 +30,10 @@ const Review = () => {
   ];
   return (
     <section className="mb-28 md:mb-40">
-      <div className="bg-[#D8A876] shadow-sm flex flex-col space-y-10 h-full sm:h-[42.438rem] w-full max-w-[96rem] 2xl:w-[75.625rem] py-16 md:py-32 lg:py-20 px-7 rounded-[60px]">
+      <div className="bg-[#D8A876] shadow-sm flex flex-col space-y-10 h-full sm:h-[42.438rem] w-full max-w-[96rem] 2xl:w-[75.625rem] py-16 md:py-32 lg:py-20 px-7 rounded-[3.75rem]">
         <div className="flex justify-center items-center">
           <h1
-            className={`text-white ${dmSerifFont.className} text-center lg:text-[3.125rem] md:text-[2rem] text-[1.25rem] lg:max-w-[547px]`}
+            className={`text-white ${dmSerifFont.className} text-center lg:text-[3.125rem] md:text-[2rem] text-[1.25rem] lg:max-w-[34.188rem]`}
           >
             What the People Thinks About Us
           </h1>
@@ -42,12 +42,12 @@ const Review = () => {
           {testimonial.map((testimony) => (
             <div
               key={testimony.id}
-              className={`bg-white shadow-md rounded-[40px] cursor-pointer space-y-5 lg:h-[339px] h-[250px] md:h-[300px] sm:max-w-[300px] lg:max-w-[370px] w-full flex flex-col px-7 lg:px-10 py-10 lg:py-12 ${
+              className={`bg-white shadow-md rounded-[2.5rem] cursor-pointer space-y-5 lg:h-[21.188rem] h-[15.625rem] md:h-[18.75rem] sm:max-w-[18.75rem] lg:max-w-[23.125rem] w-full flex flex-col px-7 lg:px-10 py-10 lg:py-12 ${
                 testimony.id == 2 ? "sm:mx-[50%] md:mx-0" : ""
               }`}
             >
               <div className="flex items-center space-x-5">
-                <div className="relative w-[77px] h-[77px]">
+                <div className="relative w-[4.813rem] h-[4.813rem]">
                   <Image
                     fill
                     priority
@@ -58,12 +58,12 @@ const Review = () => {
                 </div>
                 <div>
                   <h1
-                    className={`${dmSerifFont.className} font-bold text-[#292F36] text-sm md:text-base lg:text-lg xl:text-[22px]`}
+                    className={`${dmSerifFont.className} font-bold text-[#292F36] text-sm md:text-base lg:text-lg xl:text-[1.375rem]`}
                   >
                     {testimony.author}
                   </h1>
                   <h2
-                    className={`${jostFont.className} text-[#4D5053] text-sm md:text-base lg:text-lg xl:text-[22px]`}
+                    className={`${jostFont.className} text-[#4D5053] text-sm md:text-base lg:text-lg xl:text-[1.375rem]`}
                   >
                     {testimony.location}
                   </h2>
@@ -71,7 +71,7 @@ const Review = () => {
               </div>
               <div>
                 <p
-                  className={`${jostFont.className} text-[#4D5053] text-sm md:text-base lg:text-lg xl:text-[22px] max-w-[296px]`}
+                  className={`${jostFont.className} text-[#4D5053] text-sm md:text-base lg:text-lg xl:text-[1.375rem] max-w-[18.5rem]`}
                 >
                   {testimony.content}
                 </p>
