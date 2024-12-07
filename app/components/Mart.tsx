@@ -33,7 +33,7 @@ const Mart = () => {
           Follow Our Projects
         </h1>
         <p
-          className={`text-[#4D5053] text-[1.125rem] md:text-[1.25rem] lg:text-[1.5rem] xl:text-[1.75rem] px-10 sm:px-0 sm:max-w-[22.5rem] md:max-w-[28.125rem] lg:max-w-[44.813rem] ${jostFont.className}`}
+          className={`text-[#4D5053] text-[1.125rem] md:text-[1.25rem] lg:text-[1.5rem] xl:text-[1.75rem] sm:max-w-[28.125rem] md:max-w-[37.5rem] lg:max-w-[44.813rem] ${jostFont.className}`}
         >
           It is a long established fact that a reader will be distracted by the
           of readable content of page lookings at its layouts points.
@@ -43,11 +43,11 @@ const Mart = () => {
       <article className="grid grid-cols-1 gap-16 xl:gap-20 sm:grid-cols-2 py-20 md:py-28">
         {martItems.map((martItem) => (
           <div className="space-y-3">
-            <div className="relative w-full min-w-[15.625rem] h-[22.5rem] sm:h-[18.75rem] md:h-[23.75rem] md:min-w-[20rem] lg:w-[26.25rem] lg:h-[26.25rem] xl:w-[34.188rem] xl:h-[34.25rem]">
+            <div className="relative w-full min-w-[15.625rem] h-[22.5rem] sm:h-[18.75rem] md:h-[23.75rem] md:min-w-[20rem] lg:max-w-[30rem] lg:h-[26.25rem] xl:max-w-[34.188rem] xl:h-[34.25rem]">
               <Image src={martItem.image} alt={martItem.name} fill priority />
             </div>
 
-            <div className="flex justify-between md:min-w-[20rem] lg:w-[26.25rem] xl:w-[34.188rem]">
+            <div className="flex justify-between md:min-w-[20rem] lg:max-w-[30rem] xl:w-[34.188rem]">
               <div>
                 <h1
                   className={`${dmSerifFont.className} text-[#292F36] text-[1.25rem] lg:text-[1.563rem]`}

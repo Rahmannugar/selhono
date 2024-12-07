@@ -1,6 +1,8 @@
+import Count from "./components/Count";
 import Details from "./components/Details";
 import Hero from "./components/Hero";
 import Mart from "./components/Mart";
+import News from "./components/News";
 import Partner from "./components/Partner";
 import Review from "./components/Review";
 import Work from "./components/Work";
@@ -14,6 +16,8 @@ const page = () => {
       <Review />
       <Partner />
       <Mart />
+      <Count />
+      <News />
     </main>
   );
 };
