@@ -57,7 +57,7 @@ const Details = () => {
           </div>
 
           <button
-            className={`${interFont.className} bg-[#CDA274] hover:bg-[#ffe1c1] mt-7 sm:mt-10 lg:mt-14 duration-200 font-medium ease-in-out rounded-[1.125rem] text-white flex items-center justify-center space-x-2 py-5 lg:py-6 px-7 text-sm md:text-lg`}
+            className={`${interFont.className} bg-[#CDA274] hover:bg-[#7a552e] mt-7 sm:mt-10 lg:mt-14 duration-200 font-medium ease-in rounded-[1.125rem] text-white flex items-center justify-center space-x-3 py-5 lg:py-6 px-7 text-sm md:text-lg`}
           >
             <h1 id="Get Free Estimate">Get Free Estimate</h1>
 

@@ -42,26 +42,26 @@ const News = () => {
         </p>
       </article>
 
-      <article className="grid grid-cols-1 mt-28 sm:grid-cols-2 lg:grid-cols-3 gap-10 w-full max-w-[1210px]">
+      <article className="grid grid-cols-1 mt-28 sm:grid-cols-2 lg:grid-cols-3 gap-10 w-full max-w-[75.625rem]">
         {blogItems.map((blogItem) => (
           <div
             key={blogItem.id}
-            className={`w-full xl:w-[382px] relative cursor-pointer flex flex-col hover:bg-[#F4F0EC] group duration-300 ease-in p-5 rounded-[50px] border border-[#E7E7E7] ${
+            className={`w-full xl:w-[23.875rem] relative cursor-pointer flex flex-col hover:bg-[#F4F0EC] group duration-300 ease-in p-5 rounded-[3.125rem] border border-[#E7E7E7] ${
               blogItem.id == 2 ? "sm:mx-[50%] lg:mx-0" : ""
             }`}
           >
             <div className="relative">
-              <div className="relative w-full h-[270px] sm:h-[250px] md:h-[289px]">
+              <div className="relative w-full h-[16.875rem] sm:h-[15.625rem] md:h-[18.063rem]">
                 <Image
                   src={blogItem.image}
                   alt={blogItem.label}
                   fill
                   priority
-                  className="rounded-t-[50px]"
+                  className="rounded-t-[3.125rem]"
                 />
               </div>
               <h1
-                className={`absolute bottom-5 left-5 px-4 rounded-r-[8px] rounded-tl-[8px] py-2  bg-black/50 text-white ${jostFont.className}`}
+                className={`absolute bottom-5 left-5 px-4 rounded-r-[0.5rem] rounded-tl-[0.5rem] py-2  bg-black/50 text-white ${jostFont.className}`}
               >
                 {blogItem.label}
               </h1>
@@ -69,7 +69,7 @@ const News = () => {
 
             <div className="mt-2 flex flex-col justify-between flex-grow">
               <h1
-                className={`${dmSerifFont.className} text-lg lg:text-[22px] xl:text-[25px] max-w-[300px] text-[#292F36]`}
+                className={`${dmSerifFont.className} text-lg lg:text-[1.375rem] xl:text-[1.563rem] max-w-[18.75rem] text-[#292F36]`}
               >
                 {blogItem.title}
               </h1>
@@ -79,7 +79,7 @@ const News = () => {
                   {blogItem.date}
                 </h2>
 
-                <div className="flex justify-center items-center w-[40px] h-[40px] lg:w-[45px] lg:h-[45px] xl:w-[52px] xl:h-[52px] bg-[#D8A876] duration-300 ease-in group-hover:bg-[#C76904] rounded-full">
+                <div className="flex justify-center items-center w-[2.5rem] h-[2.5rem] lg:w-[2.813rem] lg:h-[2.813rem] xl:w-[3.25rem] xl:h-[3.25rem] bg-[#D8A876] duration-300 ease-in group-hover:bg-[#C76904] rounded-full">
                   <svg
                     width="10"
                     height="20"

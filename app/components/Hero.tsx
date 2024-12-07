@@ -31,7 +31,7 @@ const Hero = () => {
         </div>
 
         <button
-          className={`${interFont.className} bg-[#CDA274] hover:bg-[#ffe1c1] font-medium duration-200 ease-in-out rounded-[1.125rem] text-white flex items-center justify-center space-x-2 py-4 px-7 text-sm md:text-lg`}
+          className={`${interFont.className} bg-[#CDA274] hover:bg-[#7a552e] font-medium duration-200 ease-in rounded-[1.125rem] text-white flex items-center justify-center space-x-3 py-4 px-7 text-sm md:text-lg`}
         >
           <h1 id="Get started">Get started</h1>
 

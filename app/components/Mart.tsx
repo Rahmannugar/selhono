@@ -61,7 +61,7 @@ const Mart = () => {
                 </h2>
               </div>
 
-              <div className="flex justify-center items-center w-[3.125rem] h-[3.125rem] lg:w-[4.375rem] lg:h-[4.375rem] hover:bg-[#ffe1c1] duration-200 bg-[#D8A876] rounded-full">
+              <div className="flex justify-center items-center w-[3.125rem] h-[3.125rem] lg:w-[4.375rem] lg:h-[4.375rem] hover:bg-[#C76904] duration-200 bg-[#D8A876] rounded-full">
                 <svg
                   width="10"
                   height="20"
