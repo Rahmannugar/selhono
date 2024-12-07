@@ -46,7 +46,7 @@ const News = () => {
         {blogItems.map((blogItem) => (
           <div
             key={blogItem.id}
-            className={`w-full xl:w-[382px] relative cursor-pointer hover:bg-[#F4F0EC] group duration-300 ease-in p-5 rounded-[50px] border border-[#E7E7E7] ${
+            className={`w-full xl:w-[382px] relative cursor-pointer flex flex-col hover:bg-[#F4F0EC] group duration-300 ease-in p-5 rounded-[50px] border border-[#E7E7E7] ${
               blogItem.id == 2 ? "sm:mx-[50%] lg:mx-0" : ""
             }`}
           >
@@ -67,14 +67,14 @@ const News = () => {
               </h1>
             </div>
 
-            <div className="mt-2">
+            <div className="mt-2 flex flex-col justify-between flex-grow">
               <h1
                 className={`${dmSerifFont.className} text-lg lg:text-[22px] xl:text-[25px] max-w-[300px] text-[#292F36]`}
               >
                 {blogItem.title}
               </h1>
 
-              <div className="flex justify-between items-center w-full mt-7 mb-3">
+              <div className="flex justify-between items-center w-full mt-auto">
                 <h2 className={`${jostFont.className} text-[#4D5053]`}>
                   {blogItem.date}
                 </h2>
