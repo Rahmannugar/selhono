@@ -4,7 +4,7 @@ import { dmSerifFont, jostFont } from "../util/font";
 const Advert = () => {
   return (
     <section className="mt-28 relative text-center flex flex-col justify-center items-center">
-      <div className="relative min-w-[300px] w-full h-[250px] sm:h-[300px] md:h-[350px] lg:h-[430px]">
+      <div className="relative min-w-[18.75rem] w-full h-[15.625rem] sm:h-[18.75rem] md:h-[21.875rem] lg:h-[26.875rem]">
         <Image
           src="/images/advert.png"
           alt="advert"
