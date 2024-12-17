@@ -1,11 +1,11 @@
+import Quotes from "./about_components/Quotes";
 import Slider from "./about_components/Slider";
 
 const page = () => {
   return (
     <main>
-      <div>
-        <Slider />
-      </div>
+      <Slider />
+      <Quotes />
     </main>
   );
 };
