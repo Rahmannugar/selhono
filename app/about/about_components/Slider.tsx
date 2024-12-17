@@ -1,6 +1,7 @@
 "use client";
 
 import { dmSerifFont } from "@/app/util/font";
+import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { useState } from "react";
 
@@ -27,34 +28,90 @@ const Slider = () => {
       url: "/images/about-5.jpg",
     },
   ];
+
   const [currentIndex, setCurrentIndex] = useState(2);
+  const [direction, setDirection] = useState(0);
+
   const handleNext = () => {
+    setDirection(1);
     setCurrentIndex((prevIndex) =>
       prevIndex + 1 === sliderImages.length ? 0 : prevIndex + 1
     );
   };
   const handlePrevious = () => {
+    setDirection(-1);
     setCurrentIndex((prevIndex) =>
       prevIndex - 1 < 0 ? sliderImages.length - 1 : prevIndex - 1
     );
   };
   const handleDotClick = (index: any) => {
+    setDirection(index > currentIndex ? 1 : -1);
     setCurrentIndex(index);
   };
 
+  const sliderVariants = {
+    initial: (direction: number) => ({
+      x: direction > 0 ? "100%" : "-100%",
+    }),
+    animate: {
+      x: 0,
+      transition: {
+        x: { type: "spring", stiffness: 200, damping: 30 },
+      },
+    },
+    exit: (direction: number) => ({
+      x: direction > 0 ? "-100%" : "100%",
+      transition: {
+        x: { type: "spring", stiffness: 200, damping: 30 },
+      },
+    }),
+  };
+
   return (
-    <section className="relative h-[356px]">
-      <div className="relative w-full h-full">
-        <Image
-          fill
-          priority
+    <section className="relative h-[500px] md:h-[356px] overflow-hidden">
+      <AnimatePresence custom={direction} mode="popLayout">
+        <motion.div
           key={currentIndex}
-          alt={sliderImages[currentIndex].name}
-          src={sliderImages[currentIndex].url}
-        />
+          variants={sliderVariants}
+          initial="initial"
+          animate="animate"
+          exit="exit"
+          custom={direction}
+          className="relative md:hidden w-full h-full"
+        >
+          <Image
+            className="object-cover"
+            fill
+            key={currentIndex}
+            alt={sliderImages[currentIndex].name}
+            src={sliderImages[currentIndex].url}
+          />
+        </motion.div>
+      </AnimatePresence>
+
+      {/* Images for md and lg screens */}
+      <div className="hidden md:flex h-full space-x-4">
+        {sliderImages.map((image, index) => (
+          <div
+            key={index}
+            className={`
+              relative h-full transition-all duration-500
+              ${index === currentIndex ? "w-full" : "md:w-1/3 lg:w-1/5"}
+               
+              
+            `}
+          >
+            <Image
+              src={image.url}
+              alt={image.name}
+              fill
+              className="object-cover"
+            />
+          </div>
+        ))}
       </div>
 
-      <div className="flex justify-between items-center w-full absolute top-[40%] px-5 md:px-10">
+      <div className="flex justify-between items-center w-full z-20 absolute top-[40%] px-5 md:px-10">
         {/* left slider */}
         <div className="cursor-pointer" onClick={handlePrevious}>
           <svg
@@ -87,20 +144,25 @@ const Slider = () => {
         </div>
       </div>
 
-      <div className="flex absolute top-[50%] space-y-5 flex-col justify-center items-center">
-        <h1
-          className={`${dmSerifFont.className} text-white text-[30px] lg:text-[70px]`}
-        >
-          About Us
-        </h1>
-        <div className="flex space-x-2">
-          {sliderImages.map((_, index) => (
-            <div
-              className={`${
-                index == currentIndex ? "bg-[#4D5053]" : "bg-white"
-              } h-[15px] w-[15px] rounded-full`}
-            ></div>
-          ))}
+      <div className="absolute top-[45%] left-0 right-0">
+        <div className="flex flex-col items-center space-y-40 md:space-y-24 lg:space-y-12 w-full">
+          <h1
+            className={`${dmSerifFont.className} text-white text-[35px] sm:text-[40px] md:text-[50px] lg:text-[70px]`}
+          >
+            About Us
+          </h1>
+
+          {/* slider dots */}
+          <div className="flex space-x-3">
+            {sliderImages.map((_, index) => (
+              <div
+                onClick={() => handleDotClick(index)}
+                className={`${
+                  index === currentIndex ? "bg-[#4D5053]" : "bg-white"
+                } h-[15px] w-[15px] cursor-pointer rounded-full`}
+              ></div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
