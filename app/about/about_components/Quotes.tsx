@@ -39,9 +39,9 @@ const Quotes = () => {
                 <path
                   d="M1 8.4353L14.7232 8.29845M9.61818 1.91125L16.1412 8.43424L9.48677 15.0886"
                   stroke="white"
-                  stroke-width="2"
-                  stroke-linecap="square"
-                  stroke-linejoin="round"
+                  strokeWidth="2"
+                  strokeLinecap="square"
+                  strokeLinejoin="round"
                 />
               </svg>
             </button>

@@ -1,12 +1,17 @@
 import type { Metadata } from "next";
-
 import "./globals.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
 export const metadata: Metadata = {
-  title: "Selhono",
+  title: {
+    default: "Selhono",
+    template: "%s - Selhono",
+  },
   description: "Selhono interior designs",
+  twitter: {
+    card: "summary_large_image",
+  },
 };
 
 export default function RootLayout({

@@ -42,7 +42,7 @@ const Mart = () => {
 
       <article className="grid grid-cols-1 gap-16 xl:gap-20 sm:grid-cols-2 py-20 md:py-28">
         {martItems.map((martItem) => (
-          <div className="space-y-3">
+          <div className="space-y-3" key={martItem.id}>
             <div className="relative w-full min-w-[15.625rem] h-[22.5rem] sm:h-[18.75rem] md:h-[23.75rem] md:min-w-[20rem] lg:max-w-[30rem] lg:h-[26.25rem] xl:max-w-[34.188rem] xl:h-[34.25rem]">
               <Image src={martItem.image} alt={martItem.name} fill priority />
             </div>
