@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { dmSerifFont, jostFont } from "../util/font";
 
 const Work = () => {
@@ -20,44 +21,33 @@ const Work = () => {
   ];
   return (
     <section className="mt-16 md:mt-20 lg:mt-24">
-      <ul className="sm:flex space-y-10 sm:space-y-0 sm:justify-center sm:space-x-5 md:space-x-10 sm:items-center">
+      <ul className="sm:flex space-y-10 sm:space-y-0 sm:justify-center border-2 rounded-xl shadow-sm p-5 sm:space-x-5 md:space-x-10 sm:items-center">
         {works.map((work) => (
           <li
-            className="flex flex-col justify-center items-center text-center"
+            className="flex flex-col justify-center border p-3 shadow-sm items-center text-center"
             key={work.id}
           >
-            <div className="space-y-3 lg:space-y-4">
-              <h1
-                className={`${dmSerifFont.className} text-[#292F36] text-lg lg:text-[1.563rem]`}
-              >
-                {work.title}
-              </h1>
-              <p
-                className={`${jostFont.className} text-[#4D5053] lg:max-w-[358px] lg:text-[1.375rem]`}
-              >
-                {work.body}
-              </p>
-            </div>
-            <button
-              className={`flex items-center font-semibold space-x-2 mt-5 sm:mt-7 lg:mt-12 lg:text-lg ${jostFont.className}`}
-            >
-              <h2>Read More</h2>
-              <svg
-                width="19"
-                height="17"
-                viewBox="0 0 19 17"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M1.92944 8.43529L15.6526 8.29844M10.5476 1.91125L17.0706 8.43424L10.4162 15.0886"
-                  stroke="black"
-                  strokeWidth="2"
-                  strokeLinecap="square"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </button>
+            <Link href="/services">
+              <div className="space-y-3 lg:space-y-4">
+                <h1
+                  className={`${dmSerifFont.className} text-[#292F36] text-lg lg:text-[1.563rem]`}
+                >
+                  {work.title}
+                </h1>
+                <p
+                  className={`${jostFont.className} text-[#4D5053] lg:max-w-[358px] lg:text-[1.375rem]`}
+                >
+                  {work.body}
+                </p>
+              </div>
+              <div className="flex justify-center items-center">
+                <button
+                  className={`font-medium space-x-2 mt-5 sm:mt-7 text-sm lg:mt-12 lg:text-lg ${jostFont.className}`}
+                >
+                  <h2>READ MORE</h2>
+                </button>
+              </div>
+            </Link>
           </li>
         ))}
       </ul>

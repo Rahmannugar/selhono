@@ -38,7 +38,7 @@ const Review = () => {
             What the People Thinks About Us
           </h1>
         </div>
-        <div className="sm:grid sm:grid-cols-2 lg:grid-cols-3 gap-5 space-y-10 sm:space-y-0">
+        <div className="sm:grid sm:grid-cols-2 mx-auto lg:grid-cols-3 gap-5 space-y-10 sm:space-y-0">
           {testimonial.map((testimony) => (
             <div
               key={testimony.id}
@@ -71,7 +71,7 @@ const Review = () => {
               </div>
               <div>
                 <p
-                  className={`${jostFont.className} text-[#4D5053] text-sm md:text-base lg:text-lg xl:text-[1.375rem] max-w-[18.5rem]`}
+                  className={`${jostFont.className} text-[#4D5053] text-sm md:text-base lg:text-lg xl:text-[1.375rem] md:max-w-[18.5rem]`}
                 >
                   {testimony.content}
                 </p>

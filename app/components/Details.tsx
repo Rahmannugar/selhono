@@ -30,7 +30,7 @@ const Details = () => {
           </div>
           {/* contact  */}
           <div className="flex items-center space-x-4 mt-5 md:mt-7">
-            <div className="lg:w-[5.813rem] lg:h-[5.813rem] md:w-[5rem] md:h-[5rem] w-[4.063rem] h-[4.063rem] rounded-full bg-white flex justify-center items-center">
+            <div className="lg:w-[5.813rem] lg:h-[5.813rem] md:w-[5rem] md:h-[5rem] w-[3.5rem] h-[3.5rem] rounded-full bg-white flex justify-center items-center">
               <svg
                 width="34"
                 height="34"
@@ -57,26 +57,9 @@ const Details = () => {
           </div>
 
           <button
-            className={`${interFont.className} bg-[#CDA274] hover:bg-[#7a552e] mt-7 sm:mt-10 lg:mt-14 duration-200 font-medium ease-in rounded-[1.125rem] text-white flex items-center justify-center space-x-3 py-5 lg:py-6 px-7 text-sm md:text-lg`}
+            className={`${interFont.className} bg-[#CDA274] hover:bg-[#7a552e] mt-7 sm:mt-10 lg:mt-14 duration-200 font-medium ease-in rounded-[1.125rem] text-white flex items-center justify-center space-x-3 py-4 lg:py-6 px-5 text-sm md:text-lg`}
           >
             <h1 id="Get Free Estimate">Get Free Estimate</h1>
-
-            <svg
-              aria-labelledby="Get Free Estimate"
-              width="18"
-              height="17"
-              viewBox="0 0 18 17"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M1 8.43536L14.7232 8.29851M9.61818 1.91132L16.1412 8.4343L9.48677 15.0887"
-                stroke="white"
-                strokeWidth="2"
-                strokeLinecap="square"
-                strokeLinejoin="round"
-              />
-            </svg>
           </button>
         </div>
       </div>

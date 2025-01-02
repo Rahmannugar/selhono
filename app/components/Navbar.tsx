@@ -22,7 +22,7 @@ const Navbar = () => {
 
   return (
     <header className="relative pb-24 md:pb-0 z-50">
-      <div className="flex backdrop-blur-md fixed md:relative w-full bg-white/30 shadow-md md:shadow-none justify-between 2xl:justify-center xl:space-x-10 2xl:space-x-72 items-center lg:px-16 xl:px-28 px-7 sm:px-10 py-8 md:py-14">
+      <div className="flex backdrop-blur-md fixed md:relative w-full bg-white/30 shadow-md md:shadow-none justify-between 2xl:justify-center xl:space-x-10 2xl:space-x-72 items-center lg:px-16 xl:px-28 px-7 sm:px-10 py-5 md:py-14">
         <div>
           <Link href="/">
             <svg
