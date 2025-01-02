@@ -22,12 +22,12 @@ const Navbar = () => {
 
   return (
     <header className="relative pb-[72px] md:pb-0 z-50">
-      <div className="flex backdrop-blur-md fixed md:relative w-full bg-white/30 border-b-2 md:border-none justify-between 2xl:justify-center xl:space-x-10 2xl:space-x-72 items-center lg:px-16 xl:px-28 px-7 sm:px-10 py-5 md:py-14">
+      <div className="flex backdrop-blur-md fixed md:relative w-full bg-white/30 border-b-2 md:border-none justify-between 2xl:justify-center xl:space-x-10 2xl:space-x-72 items-center lg:px-16 xl:px-28 px-7 sm:px-10 py-6 md:py-14">
         <div>
           <Link href="/">
             <svg
               aria-label="Homepage"
-              className="lg:w-[14.1875rem] w-[9.375rem]"
+              className="lg:w-[14.1875rem] w-[6rem]"
               width=""
               height=""
               viewBox="0 0 227 50"
@@ -169,7 +169,7 @@ const Navbar = () => {
           animate={{ rotate: open ? 90 : 0 }}
           transition={{ duration: 0.3 }}
         >
-          <FaBarsStaggered size={30} />
+          <FaBarsStaggered size={20} />
         </motion.button>
 
         {/* mobile navigation */}
