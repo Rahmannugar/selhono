@@ -21,8 +21,8 @@ const Navbar = () => {
   };
 
   return (
-    <header className="relative pb-24 md:pb-0 z-50">
-      <div className="flex backdrop-blur-md fixed md:relative w-full bg-white/30 shadow-md md:shadow-none justify-between 2xl:justify-center xl:space-x-10 2xl:space-x-72 items-center lg:px-16 xl:px-28 px-7 sm:px-10 py-5 md:py-14">
+    <header className="relative pb-[72px] md:pb-0 z-50">
+      <div className="flex backdrop-blur-md fixed md:relative w-full bg-white/30 border-b-2 md:border-none justify-between 2xl:justify-center xl:space-x-10 2xl:space-x-72 items-center lg:px-16 xl:px-28 px-7 sm:px-10 py-5 md:py-14">
         <div>
           <Link href="/">
             <svg
@@ -181,7 +181,7 @@ const Navbar = () => {
           transition={{ type: "spring", stiffness: 300, damping: 30 }}
           className={`${jostFont.className} flex flex-col items-center text-[1.25rem] bg-white z-10 w-[75vw] border-r top-0 h-[100vh] fixed left-0 font-medium space-y-7 md:hidden`}
         >
-          <ul className="flex flex-col items-center space-y-14 p-36">
+          <ul className="flex flex-col items-center space-y-12 p-28">
             <li>
               <Link href="/">
                 <motion.h1
