@@ -19,7 +19,7 @@ const Hero = () => {
           <h1
             className={`xl:text-[4.063rem] lg:text-[3.438rem] md:text-[2.5rem] text-[1.5rem] sm:text-[2.188rem] ${dmSerifFont.className}`}
           >
-            Let's make your
+            Let&apos;s make your
             <span className="block">home beautiful together</span>
           </h1>
           <p

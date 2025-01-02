@@ -6,8 +6,8 @@ const Quotes = () => {
     <section className="mt-20 px-5 sm:px-10 lg:px-16">
       <article className="text-[#292F36] flex flex-col text-center space-y-7 w-fit mx-auto border-l-[3px] px-4 border-r-[3px] border-[#000000]">
         <p className={`${dmSerifFont.className} text-[30px] sm:max-w-[600px]`}>
-          I like an interior that defies labeling. I don't really want someone
-          to walk into a room and know that I did it
+          I like an interior that defies labeling. I don&apos;t really want
+          someone to walk into a room and know that I did it
         </p>
         <h2 className={`${jostFont.className} text-[20px]`}>BUNNY WILLIAMS</h2>
       </article>

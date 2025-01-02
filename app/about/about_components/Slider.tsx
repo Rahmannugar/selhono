@@ -44,7 +44,7 @@ const Slider = () => {
       prevIndex - 1 < 0 ? sliderImages.length - 1 : prevIndex - 1
     );
   };
-  const handleDotClick = (index: any) => {
+  const handleDotClick = (index: number) => {
     setDirection(index > currentIndex ? 1 : -1);
     setCurrentIndex(index);
   };
@@ -156,6 +156,7 @@ const Slider = () => {
           <div className="flex space-x-3">
             {sliderImages.map((_, index) => (
               <div
+                key={index}
                 onClick={() => handleDotClick(index)}
                 className={`${
                   index === currentIndex ? "bg-[#4D5053]" : "bg-white"
