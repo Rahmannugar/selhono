@@ -29,12 +29,12 @@ const News = () => {
     <section className="mt-32 md:mt-48 lg:mt-56">
       <article className="text-center flex flex-col space-y-1 justify-center items-center">
         <h1
-          className={`${dmSerifFont.className} text-[#292F36] text-[1.875rem] md:text-[2.5rem] lg:text-[3.438rem] xl:text-[3.75rem]`}
+          className={`${dmSerifFont.className} text-[#292F36] text-[1.5rem] md:text-[2.5rem] lg:text-[3.438rem] xl:text-[3.75rem]`}
         >
           Articles & News
         </h1>
         <p
-          className={`${jostFont.className} text-[1.125rem] md:text-[1.25rem] lg:text-[1.5rem] xl:text-[1.75rem] sm:max-w-[28.125rem] md:max-w-[37.5rem] lg:max-w-[48.125rem] text-[#4D5053]`}
+          className={`${jostFont.className} text-[1rem] md:text-[1.25rem] lg:text-[1.5rem] xl:text-[1.75rem] sm:max-w-[28.125rem] md:max-w-[37.5rem] lg:max-w-[48.125rem] text-[#4D5053]`}
         >
           It is a long established fact that a reader will be distracted by the
           of readable content of a page when lookings at its layouts the points
@@ -69,12 +69,12 @@ const News = () => {
 
             <div className="mt-2 flex flex-col justify-between flex-grow">
               <h1
-                className={`${dmSerifFont.className} text-lg lg:text-[1.375rem] xl:text-[1.563rem] max-w-[18.75rem] text-[#292F36]`}
+                className={`${dmSerifFont.className} text-[1rem] lg:text-[1.375rem] xl:text-[1.563rem] max-w-[18.75rem] text-[#292F36]`}
               >
                 {blogItem.title}
               </h1>
 
-              <div className="flex justify-between items-center w-full mt-auto">
+              <div className="flex justify-between items-center w-full mt-auto text-[0.875rem] lg:text-[1rem]">
                 <h2 className={`${jostFont.className} text-[#4D5053]`}>
                   {blogItem.date}
                 </h2>

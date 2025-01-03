@@ -28,12 +28,12 @@ const Mart = () => {
     <section>
       <article className="text-center flex flex-col justify-center items-center">
         <h1
-          className={`text-[#292F36] text-[1.875rem] md:text-[2.5rem] lg:text-[3.438rem] xl:text-[3.75rem] ${dmSerifFont.className}`}
+          className={`text-[#292F36] text-[1.5rem] md:text-[2.5rem] lg:text-[3.438rem] xl:text-[3.75rem] ${dmSerifFont.className}`}
         >
           Follow Our Projects
         </h1>
         <p
-          className={`text-[#4D5053] text-[1.125rem] md:text-[1.25rem] lg:text-[1.5rem] xl:text-[1.75rem] sm:max-w-[28.125rem] md:max-w-[37.5rem] lg:max-w-[44.813rem] ${jostFont.className}`}
+          className={`text-[#4D5053] text-[1rem] md:text-[1.25rem] lg:text-[1.5rem] xl:text-[1.75rem] sm:max-w-[28.125rem] md:max-w-[37.5rem] lg:max-w-[44.813rem] ${jostFont.className}`}
         >
           It is a long established fact that a reader will be distracted by the
           of readable content of page lookings at its layouts points.
@@ -50,18 +50,18 @@ const Mart = () => {
             <div className="flex justify-between md:min-w-[20rem] lg:max-w-[30rem] xl:w-[34.188rem]">
               <div>
                 <h1
-                  className={`${dmSerifFont.className} text-[#292F36] text-[1.25rem] lg:text-[1.563rem]`}
+                  className={`${dmSerifFont.className} text-[#292F36] text-[1.125rem] lg:text-[1.563rem]`}
                 >
                   Modern bedroom
                 </h1>
                 <h2
-                  className={`${jostFont.className} text-[#4D5053] text-[1.125rem] lg:text-[1.375rem]`}
+                  className={`${jostFont.className} text-[#4D5053] text-[1rem] lg:text-[1.375rem]`}
                 >
                   Decor / Artchitecture
                 </h2>
               </div>
 
-              <div className="flex justify-center items-center w-[3.125rem] h-[3.125rem] lg:w-[4.375rem] lg:h-[4.375rem] hover:bg-[#C76904] duration-200 bg-[#D8A876] rounded-full">
+              <div className="flex justify-center items-center w-[2.75rem] h-[2.75rem] lg:w-[4.375rem] lg:h-[4.375rem] hover:bg-[#C76904] duration-200 bg-[#D8A876] rounded-full">
                 <svg
                   width="10"
                   height="20"

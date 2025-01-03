@@ -179,7 +179,7 @@ const Navbar = () => {
           initial={{ x: "-100%" }}
           animate={{ x: open ? 0 : "-100%" }}
           transition={{ type: "spring", stiffness: 300, damping: 30 }}
-          className={`${jostFont.className} flex flex-col items-center text-[1.25rem] bg-white z-10 w-[75vw] border-r top-0 h-[100vh] fixed left-0 font-medium space-y-7 md:hidden`}
+          className={`${jostFont.className} flex flex-col items-center text-[1rem] bg-white z-10 w-[75vw] border-r top-0 h-[100vh] fixed left-0 font-medium space-y-7 md:hidden`}
         >
           <ul className="flex flex-col items-center space-y-12 p-28">
             <li>
