@@ -1,6 +1,11 @@
+"use client";
+
 import { dmSerifFont, jostFont } from "@/app/util/font";
 
 const Message = () => {
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+  };
   return (
     <section className="flex flex-col space-y-12 md:space-y-16 mb-10">
       <div className="flex justify-center items-center">
@@ -10,7 +15,7 @@ const Message = () => {
           Creative project? Let&apos;s have a productive talk.
         </h1>
       </div>
-      <form className={`${jostFont.className}`}>
+      <form className={`${jostFont.className}`} onSubmit={handleSubmit}>
         <div className="sm:flex space-y-16 sm:space-y-0 sm:space-x-10">
           <input
             type="text"
@@ -35,7 +40,7 @@ const Message = () => {
           className="border-[#000000] border-b md:text-[1.125rem] pb-1 lg:text-[1.25rem] text-[#4D5053] mt-16 placeholder:text-[#4D5053] align-bottom pt w-full focus:outline-none"
         />
         <div className="flex justify-center items-center mt-8">
-          <button className="bg-[#292F36] text-[0.875rem] lg:text-[1.125rem] text-white shadow-md rounded-[1.125rem] py-3 px-5">
+          <button className="bg-[#292F36] hover:bg-[#000000] text-[0.875rem] lg:text-[1.125rem] text-white shadow-md rounded-[1.125rem] py-3 px-5">
             Send Now
           </button>
         </div>
