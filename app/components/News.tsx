@@ -26,7 +26,7 @@ const News = () => {
     },
   ];
   return (
-    <section className="mt-32 md:mt-48 lg:mt-56">
+    <section className="mt-28 md:mt-48 lg:mt-56">
       <article className="text-center flex flex-col space-y-1 justify-center items-center">
         <h1
           className={`${dmSerifFont.className} text-[#292F36] text-[1.5rem] md:text-[2.5rem] lg:text-[3.438rem] xl:text-[3.75rem]`}
@@ -42,7 +42,7 @@ const News = () => {
         </p>
       </article>
 
-      <article className="grid grid-cols-1 mt-28 sm:grid-cols-2 lg:grid-cols-3 gap-10 w-full max-w-[75.625rem]">
+      <article className="grid grid-cols-1 mt-16 md:mt-28 sm:grid-cols-2 lg:grid-cols-3 gap-10 w-full max-w-[75.625rem]">
         {blogItems.map((blogItem) => (
           <div
             key={blogItem.id}

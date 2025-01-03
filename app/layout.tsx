@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     default: "Selhono",
     template: "%s - Selhono",
   },
-  description: "Selhono interior designs",
+  description: "Welcome to Selhono interior Designs",
   twitter: {
     card: "summary_large_image",
   },

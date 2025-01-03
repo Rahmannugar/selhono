@@ -182,7 +182,7 @@ const Navbar = () => {
           className={`${jostFont.className} flex flex-col items-center text-[1rem] bg-white z-10 w-[75vw] border-r top-0 h-[100vh] fixed left-0 font-medium space-y-7 md:hidden`}
         >
           <ul className="flex flex-col items-center space-y-12 p-28">
-            <li>
+            <li onClick={handleNav}>
               <Link href="/">
                 <motion.h1
                   className={`${
@@ -196,7 +196,7 @@ const Navbar = () => {
                 </motion.h1>
               </Link>
             </li>
-            <li>
+            <li onClick={handleNav}>
               <Link href="/about">
                 <motion.h1
                   className={`${
@@ -212,7 +212,7 @@ const Navbar = () => {
                 </motion.h1>
               </Link>
             </li>
-            <li>
+            <li onClick={handleNav}>
               <Link href="/services">
                 <motion.h1
                   className={`${
@@ -228,7 +228,7 @@ const Navbar = () => {
                 </motion.h1>
               </Link>
             </li>
-            <li>
+            <li onClick={handleNav}>
               <Link href="/projects">
                 <motion.h1
                   whileHover={{
@@ -244,7 +244,7 @@ const Navbar = () => {
                 </motion.h1>
               </Link>
             </li>
-            <li>
+            <li onClick={handleNav}>
               <Link href="/blog">
                 <motion.h1
                   whileHover={{
@@ -260,7 +260,7 @@ const Navbar = () => {
                 </motion.h1>
               </Link>
             </li>
-            <li>
+            <li onClick={handleNav}>
               <Link href="/contact">
                 <motion.h1
                   whileHover={{
@@ -276,7 +276,7 @@ const Navbar = () => {
                 </motion.h1>
               </Link>
             </li>
-            <li>
+            <li onClick={handleNav}>
               <Link href="/team">
                 <motion.h1
                   whileHover={{
@@ -292,7 +292,7 @@ const Navbar = () => {
                 </motion.h1>
               </Link>
             </li>
-            <li>
+            <li onClick={handleNav}>
               <svg
                 aria-hidden="true"
                 className="cursor-pointer"

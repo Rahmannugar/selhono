@@ -69,7 +69,7 @@ const Slider = () => {
 
   return (
     <section className="relative h-[500px] md:h-[356px] overflow-hidden">
-      <AnimatePresence custom={direction} mode="popLayout">
+      <AnimatePresence initial={false} custom={direction} mode="popLayout">
         <motion.div
           key={currentIndex}
           variants={sliderVariants}
@@ -82,6 +82,7 @@ const Slider = () => {
           <Image
             className="object-cover"
             fill
+            priority={currentIndex === 2}
             key={currentIndex}
             alt={sliderImages[currentIndex].name}
             src={sliderImages[currentIndex].url}
@@ -115,8 +116,8 @@ const Slider = () => {
         {/* left slider */}
         <div className="cursor-pointer" onClick={handlePrevious}>
           <svg
-            width="42"
-            height="74"
+            width="36"
+            height="60"
             viewBox="0 0 42 74"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -130,8 +131,8 @@ const Slider = () => {
         {/* right slider */}
         <div className="cursor-pointer" onClick={handleNext}>
           <svg
-            width="42"
-            height="74"
+            width="36"
+            height="60"
             viewBox="0 0 42 74"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
