@@ -35,7 +35,7 @@ const Work = () => {
                   {work.title}
                 </h1>
                 <p
-                  className={`${jostFont.className} text-[#4D5053] lg:max-w-[358px] lg:text-[1.375rem]`}
+                  className={`${jostFont.className} text-[#4D5053] lg:max-w-[22.375rem] lg:text-[1.375rem]`}
                 >
                   {work.body}
                 </p>

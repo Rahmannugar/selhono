@@ -1,10 +1,22 @@
-"use client";
+import { dmSerifFont } from "./util/font";
 
 const NotFound = () => {
   return (
-    <article className="bg-black text-white h-screen flex justify-center items-center uppercase">
-      404 Not Found
-    </article>
+    <section className="mt-16 mb-10 xl:px-28 px-5 lg:px-16 2xl:flex 2xl:justify-center min-h-screen 2xl:items-center sm:px-10">
+      <div className={`${dmSerifFont.className}`}>
+        <h1
+          className={`text-[#CDA274] text-[5rem] md:text-[9.375rem] lg:text-[12.5rem]`}
+        >
+          404
+        </h1>
+        <h2 className="text-[#292F36] max-w-[569px] text-[1.125rem] md:text-[1.875rem] lg::text-[2.188rem]">
+          We are sorry, but the page you requested for was not found
+        </h2>
+        <button className="bg-[#292F36] text-[0.875rem] mt-10 lg:text-[1.125rem] text-white shadow-md rounded-[1.125rem] py-3 px-5">
+          Back To Home
+        </button>
+      </div>
+    </section>
   );
 };
 export default NotFound;

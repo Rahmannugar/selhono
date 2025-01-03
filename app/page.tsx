@@ -1,3 +1,4 @@
+import Slider from "./about/about_components/Slider";
 import Advert from "./components/Advert";
 import Count from "./components/Count";
 import Details from "./components/Details";
@@ -11,6 +12,7 @@ import Work from "./components/Work";
 const page = () => {
   return (
     <main>
+      <Slider />
       <div className="overflow-hidden mt-16 xl:px-28 px-5 lg:px-16 2xl:flex 2xl:flex-col 2xl:justify-center 2xl:items-center sm:px-10">
         <Hero />
         <Work />

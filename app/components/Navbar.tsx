@@ -21,7 +21,7 @@ const Navbar = () => {
   };
 
   return (
-    <header className="relative pb-[72px] md:pb-0 z-50">
+    <header className="relative pb-[4.5rem] md:pb-0 z-50">
       <div className="flex backdrop-blur-md fixed md:relative w-full bg-white/30 border-b-2 md:border-none justify-between 2xl:justify-center xl:space-x-10 2xl:space-x-72 items-center lg:px-16 xl:px-28 px-7 sm:px-10 py-6 md:py-14">
         <div>
           <Link href="/">
@@ -89,13 +89,13 @@ const Navbar = () => {
               Services
             </motion.h1>
           </Link>
-          <Link href="/projects">
+          <Link href="/project">
             <motion.h1
               whileHover={{
                 color: "#C76904",
               }}
               className={`${
-                currentPage === "/projects"
+                currentPage === "/project"
                   ? "text-[#C76904]"
                   : "text-[#292F36]"
               }`}
@@ -229,13 +229,13 @@ const Navbar = () => {
               </Link>
             </li>
             <li onClick={handleNav}>
-              <Link href="/projects">
+              <Link href="/project">
                 <motion.h1
                   whileHover={{
                     color: "#C76904",
                   }}
                   className={`${
-                    currentPage === "/projects"
+                    currentPage === "/project"
                       ? "text-[#C76904]"
                       : "text-[#292F36]"
                   }`}

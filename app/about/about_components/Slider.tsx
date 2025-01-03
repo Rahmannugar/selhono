@@ -3,7 +3,8 @@
 import { dmSerifFont } from "@/app/util/font";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
-import { useState } from "react";
+import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
 
 const Slider = () => {
   const sliderImages = [
@@ -31,6 +32,12 @@ const Slider = () => {
 
   const [currentIndex, setCurrentIndex] = useState(2);
   const [direction, setDirection] = useState(0);
+  const [currentPage, setCurrentPage] = useState("");
+  const pathname = usePathname();
+
+  useEffect(() => {
+    setCurrentPage(pathname);
+  }, [pathname]);
 
   const handleNext = () => {
     setDirection(1);
@@ -68,7 +75,7 @@ const Slider = () => {
   };
 
   return (
-    <section className="relative h-[500px] md:h-[356px] overflow-hidden">
+    <section className="relative h-[31.25rem] md:h-[22.25rem] overflow-hidden">
       <AnimatePresence initial={false} custom={direction} mode="popLayout">
         <motion.div
           key={currentIndex}
@@ -149,9 +156,9 @@ const Slider = () => {
       <div className="absolute top-[45%] left-0 right-0">
         <div className="flex flex-col items-center space-y-40 md:space-y-24 lg:space-y-12 w-full">
           <h1
-            className={`${dmSerifFont.className} text-white text-[35px] sm:text-[40px] md:text-[50px] lg:text-[70px]`}
+            className={`${dmSerifFont.className} text-white text-[2.188rem] sm:text-[2.5rem] md:text-[3.125rem] lg:text-[4.375rem]`}
           >
-            About Us
+            {currentPage === "/" ? "SELHONO" : " ABOUT US"}
           </h1>
 
           {/* slider dots */}
@@ -162,7 +169,7 @@ const Slider = () => {
                 onClick={() => handleDotClick(index)}
                 className={`${
                   index === currentIndex ? "bg-[#4D5053]" : "bg-white"
-                } h-[15px] w-[15px] cursor-pointer rounded-full`}
+                } h-[0.938rem] w-[0.938rem] cursor-pointer rounded-full`}
               ></div>
             ))}
           </div>

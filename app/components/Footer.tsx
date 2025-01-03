@@ -1,7 +1,27 @@
+"use client";
+
 import Link from "next/link";
 import { dmSerifFont, jostFont } from "../util/font";
+import { usePathname } from "next/navigation";
 
 const Footer = () => {
+  const pathname = usePathname();
+  const validRoutes = [
+    "/",
+    "/about",
+    "services",
+    "/project",
+    "blog",
+    "contact",
+    "team",
+  ];
+
+  const is404 = pathname && !validRoutes.includes(pathname);
+
+  if (is404) {
+    return null;
+  }
+
   return (
     <footer className="max-w-[75.625rem] space-y-16 md:space-y-20 lg:space-y-28 mt-20 md:mt-10 mb-4">
       {/* < md screens */}
@@ -123,7 +143,7 @@ const Footer = () => {
             </svg>
           </Link>
           <h1
-            className={`${jostFont.className} text-[#4D5053] text-[0.563rem] sm:text-[0.75rem] lg:text-[1.125rem] max-w-[6.25rem] sm:max-w-[12.5rem] lg:max-w-[15.625rem] xl:max-w-[24.563rem] mt-3`}
+            className={`${jostFont.className} text-[#4D5053] lg:text-[1.375rem] text-[1.125rem] max-w-[6.25rem] sm:max-w-[12.5rem] lg:max-w-[24.563rem] mt-3`}
           >
             It is a long established fact that a reader will be distracted
             lookings.
@@ -253,7 +273,9 @@ const Footer = () => {
             className={`${jostFont.className} text-[#4D5053] text-[0.875rem] max-w-[6.25rem] lg:max-w-[12.5rem] lg:text-[1.125rem] space-y-7`}
           >
             <li>55 East Birchwood Ave. Brooklyn, New York 11201</li>
-            <li className="break-words">contact@selhono.com</li>
+            <li className="break-words lg:whitespace-nowrap">
+              contact@selhono.com
+            </li>
             <li>(123) 456 - 7890</li>
           </ul>
         </div>
