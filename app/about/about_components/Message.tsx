@@ -7,7 +7,7 @@ const Message = () => {
         <h1
           className={`${dmSerifFont.className} text-[#292F36] max-w-[37.5rem] text-center text-[1.5rem] md:text-[1.875rem] lg:text-[2.5rem]`}
         >
-          Creative project? Let's have a productive talk.
+          Creative project? Let&apos;s have a productive talk.
         </h1>
       </div>
       <form className={`${jostFont.className}`}>
