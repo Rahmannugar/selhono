@@ -82,7 +82,7 @@ const Slider = () => {
           <Image
             className="object-cover"
             fill
-            priority={currentIndex === 2}
+            priority={true}
             key={currentIndex}
             alt={sliderImages[currentIndex].name}
             src={sliderImages[currentIndex].url}
@@ -105,6 +105,7 @@ const Slider = () => {
             <Image
               src={image.url}
               alt={image.name}
+              priority={true}
               fill
               className="object-cover"
             />
