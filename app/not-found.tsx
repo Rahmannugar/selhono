@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { dmSerifFont } from "./util/font";
 
 const NotFound = () => {
@@ -12,9 +13,11 @@ const NotFound = () => {
         <h2 className="text-[#292F36] max-w-[569px] text-[1.125rem] md:text-[1.875rem] lg::text-[2.188rem]">
           We are sorry, but the page you requested for was not found!
         </h2>
-        <button className="bg-[#292F36] text-[0.875rem] mt-10 lg:text-[1.125rem] text-white shadow-md rounded-[0.5rem] py-3 px-5">
-          Back To Home
-        </button>
+        <Link href="/">
+          <button className="bg-[#292F36] text-[0.875rem] mt-10 lg:text-[1.125rem] text-white shadow-md rounded-[0.5rem] py-3 px-5">
+            Back To Home
+          </button>
+        </Link>
       </div>
     </section>
   );
