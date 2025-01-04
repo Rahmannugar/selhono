@@ -11,9 +11,9 @@ const Footer = () => {
     "/about",
     "services",
     "/project",
-    "blog",
-    "contact",
-    "team",
+    "/blog",
+    "/contact",
+    "/team",
   ];
 
   const is404 = pathname && !validRoutes.includes(pathname);
