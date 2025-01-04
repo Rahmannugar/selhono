@@ -49,25 +49,25 @@ const TeamSection = () => {
       <div className="grid sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-y-16 sm:gap-x-6">
         {team.map((member) => (
           <div key={member.id} className="space-y-4">
-            <div className="relative w-full mx-auto max-w-[308px] h-[470px] sm:h-[500px] md:h-[25rem] lg:h-[30.625rem] xl:h-[470px] 2xl:w-[308px]">
+            <div className="relative w-full mx-auto max-w-[19.25rem] h-[29.375rem] sm:h-[500px] md:h-[25rem] lg:h-[30.625rem] xl:h-[29.375rem] 2xl:w-[19.25rem]">
               <Image
                 src={member.url}
                 alt={member.name}
                 fill
                 priority
-                className="rounded-[30px] object-cover"
+                className="rounded-[1.875rem] object-cover"
               />
             </div>
 
             <div className="flex flex-col justify-center items-center space-y-4">
               <div>
                 <h2
-                  className={`text-[#292F36] text-[18px] sm:text-[22px] ${dmSerifFont.className}`}
+                  className={`text-[#292F36] text-[1.125rem] sm:text-[1.375rem] ${dmSerifFont.className}`}
                 >
                   {member.name}
                 </h2>
                 <h3
-                  className={`text-[#4D5053] text-[14px] sm:text-[18px] ${jostFont.className}`}
+                  className={`text-[#4D5053] text-[0.875rem] sm:text-[1.125rem] ${jostFont.className}`}
                 >
                   Design, Australia
                 </h3>

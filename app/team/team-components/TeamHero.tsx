@@ -4,7 +4,7 @@ import Image from "next/image";
 const TeamHero = () => {
   return (
     <section className="relative">
-      <div className="relative w-full h-[356px]">
+      <div className="relative w-full h-[22.25rem]">
         <Image
           src="/images/team.jpg"
           alt="team"
