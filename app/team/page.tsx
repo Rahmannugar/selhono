@@ -16,6 +16,6 @@ export default page;
 export const generateMetadata = () => {
   return {
     title: "Team",
-    description: "Selhono interior Designs Team",
+    description: "Selhono Interior Designs Team",
   };
 };

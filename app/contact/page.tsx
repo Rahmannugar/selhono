@@ -30,6 +30,6 @@ export default page;
 export const generateMetadata = () => {
   return {
     title: "Contact",
-    description: "Selhono interior Designs contact page",
+    description: "Selhono Interior Designs contact page",
   };
 };
