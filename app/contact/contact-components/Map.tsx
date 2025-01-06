@@ -27,7 +27,7 @@ const Map = () => {
     setMap(map);
   }, []);
 
-  const onUnmount = useCallback(function callback(map: google.maps.Map) {
+  const onUnmount = useCallback(() => {
     setMap(null);
   }, []);
 
