@@ -50,8 +50,8 @@ const FollowCursor: React.FC<FollowCursorProps> = ({
     let canvas: HTMLCanvasElement | null = null;
     let context: CanvasRenderingContext2D | null = null;
     let animationFrame: number;
-    let width = window.innerWidth;
-    let height = window.innerHeight;
+    const width = window.innerWidth;
+    const height = window.innerHeight;
     let isFirstTouch = true;
     const cursor = { x: width / 2, y: height / 2 };
 
