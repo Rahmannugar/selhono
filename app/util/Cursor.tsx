@@ -44,49 +44,48 @@ class Dot {
 const FollowCursor: React.FC<FollowCursorProps> = ({
   color = "#323232a6",
   dotSize = 14,
-  lag = 7,
+  lag = 8,
 }) => {
   useEffect(() => {
-    let canvas: HTMLCanvasElement | null = null;
-    let context: CanvasRenderingContext2D | null = null;
+    let canvas: HTMLCanvasElement;
+    let context: CanvasRenderingContext2D | null;
     let animationFrame: number;
-    const width = window.innerWidth;
-    const height = window.innerHeight;
-    let isFirstTouch = true;
-    const cursor = { x: width / 2, y: height / 2 };
+    let width = window.innerWidth;
+    let height = window.innerHeight;
+    let cursor = { x: width / 2, y: height / 2 };
+    const prefersReducedMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)"
+    );
 
-    const dot = new Dot(cursor.x, cursor.y, dotSize, lag, color);
-
-    const showCursor = () => {
-      if (canvas) {
-        canvas.style.opacity = "1";
-      }
-    };
+    const dot = new Dot(width / 2, height / 2, dotSize, lag, color);
 
     const onPointerMove = (e: PointerEvent) => {
-      showCursor();
       cursor.x = e.clientX;
       cursor.y = e.clientY;
+      dot.jumpTo(cursor.x, cursor.y);
     };
 
     const onTouchStart = (e: TouchEvent) => {
-      e.preventDefault();
-      showCursor();
       if (e.touches.length > 0) {
         cursor.x = e.touches[0].clientX;
         cursor.y = e.touches[0].clientY;
-        if (isFirstTouch) {
-          dot.jumpTo(cursor.x, cursor.y);
-          isFirstTouch = false;
-        }
+        dot.jumpTo(cursor.x, cursor.y);
       }
     };
 
     const onTouchMove = (e: TouchEvent) => {
-      e.preventDefault();
       if (e.touches.length > 0) {
         cursor.x = e.touches[0].clientX;
         cursor.y = e.touches[0].clientY;
+      }
+    };
+
+    const onWindowResize = () => {
+      width = window.innerWidth;
+      height = window.innerHeight;
+      if (canvas) {
+        canvas.width = width;
+        canvas.height = height;
       }
     };
 
@@ -95,41 +94,59 @@ const FollowCursor: React.FC<FollowCursorProps> = ({
         context.clearRect(0, 0, width, height);
         dot.moveTowards(cursor.x, cursor.y, context);
       }
-      animationFrame = requestAnimationFrame(updateDot);
     };
 
-    canvas = document.createElement("canvas");
-    context = canvas.getContext("2d");
+    const loop = () => {
+      updateDot();
+      animationFrame = requestAnimationFrame(loop);
+    };
 
-    if (canvas && context) {
+    const init = () => {
+      if (prefersReducedMotion.matches) {
+        console.log("Reduced motion enabled, cursor effect skipped.");
+        return;
+      }
+
+      canvas = document.createElement("canvas");
+      context = canvas.getContext("2d");
+
       canvas.style.position = "fixed";
       canvas.style.top = "0";
       canvas.style.left = "0";
       canvas.style.pointerEvents = "none";
       canvas.style.zIndex = "9999";
-      canvas.style.opacity = "0";
-      canvas.style.transition = "opacity 0.2s ease";
       canvas.width = width;
       canvas.height = height;
 
       document.body.appendChild(canvas);
 
       window.addEventListener("pointermove", onPointerMove);
-      window.addEventListener("touchstart", onTouchStart, { passive: false });
-      window.addEventListener("touchmove", onTouchMove, { passive: false });
+      window.addEventListener("touchstart", onTouchStart);
+      window.addEventListener("touchmove", onTouchMove);
+      window.addEventListener("resize", onWindowResize);
 
-      updateDot();
-    }
+      loop();
+    };
 
-    return () => {
-      if (canvas) {
-        canvas.remove();
-      }
+    const destroy = () => {
+      if (canvas) canvas.remove();
       cancelAnimationFrame(animationFrame);
       window.removeEventListener("pointermove", onPointerMove);
       window.removeEventListener("touchstart", onTouchStart);
       window.removeEventListener("touchmove", onTouchMove);
+      window.removeEventListener("resize", onWindowResize);
     };
+
+    prefersReducedMotion.onchange = () => {
+      if (prefersReducedMotion.matches) {
+        destroy();
+      } else {
+        init();
+      }
+    };
+
+    init();
+    return () => destroy();
   }, [color, dotSize, lag]);
 
   return null;
