@@ -1,8 +1,10 @@
 import Image from "next/image";
 import Contact from "./contact-components/Contact";
 import Map from "./contact-components/Map";
+import { getMapData } from "../lib/mapData";
 
-const page = () => {
+const page = async () => {
+  const mapData = await getMapData();
   return (
     <main>
       <div className="relative w-full h-[22.25rem]">
@@ -14,9 +16,11 @@ const page = () => {
           className="object-cover"
         />
       </div>
-      <div className="xl:px-20 px-5 lg:px-16 2xl:flex 2xl:justify-center 2xl:items-center sm:px-10">
+      <div className="xl:px-20 px-5 lg:px-16 2xl:flex 2xl:flex-col 2xl:justify-center 2xl:items-center sm:px-10">
         <Contact />
-        <Map />
+        <div className="my-20 w-full">
+          <Map center={mapData.center} />
+        </div>
       </div>
     </main>
   );
