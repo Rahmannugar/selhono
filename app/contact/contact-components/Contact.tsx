@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { dmSerifFont, jostFont } from "../util/font";
+import { dmSerifFont, jostFont } from "../../util/font";
 import Image from "next/image";
 
 const Contact = () => {
