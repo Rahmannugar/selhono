@@ -10,7 +10,6 @@ const Advert = () => {
           src="/images/advert.png"
           alt="advert"
           fill
-          priority
           className="object-cover"
         />
       </div>

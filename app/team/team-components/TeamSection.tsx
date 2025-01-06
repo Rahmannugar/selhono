@@ -54,7 +54,6 @@ const TeamSection = () => {
                 src={member.url}
                 alt={member.name}
                 fill
-                priority
                 className="rounded-[1.875rem] object-cover"
               />
             </div>

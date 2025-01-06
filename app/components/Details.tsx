@@ -8,9 +8,8 @@ const Details = () => {
         <div className="relative h-[25rem] w-full sm:w-[20rem] md:w-[27rem] md:h-[35rem] lg:w-[36rem] xl:w-[40.813rem] lg:h-[43.75rem]">
           <Image
             src="/images/details-1.png"
-            alt="hero-image"
+            alt="detail-1"
             fill
-            priority
             className="object-fill"
           />
         </div>
@@ -67,9 +66,8 @@ const Details = () => {
       <div className="relative h-[25rem] sm:w-[25rem] hidden sm:block md:w-[35rem] md:h-[35rem] lg:w-[39rem] xl:w-[45.813rem] lg:h-[43.75rem]">
         <Image
           src="/images/details-2.png"
-          alt="hero-image"
+          alt="detail-2"
           fill
-          priority
           className="object-fill"
         />
       </div>

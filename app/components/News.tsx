@@ -56,7 +56,6 @@ const News = () => {
                   src={blogItem.image}
                   alt={blogItem.label}
                   fill
-                  priority
                   className="rounded-t-[3.125rem]"
                 />
               </div>

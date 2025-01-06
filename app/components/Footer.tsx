@@ -52,7 +52,7 @@ const Footer = () => {
           lookings.
         </h1>
 
-        <div className="flex items-center space-x-5 mt-7">
+        <div className="flex items-center space-x-7 mt-7">
           {/* facebook */}
           <Link href="/">
             <svg
