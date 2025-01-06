@@ -95,9 +95,7 @@ const Navbar = () => {
                 color: "#C76904",
               }}
               className={`${
-                currentPage === "/project"
-                  ? "text-[#C76904]"
-                  : "text-[#292F36]"
+                currentPage === "/project" ? "text-[#C76904]" : "text-[#292F36]"
               }`}
             >
               Project

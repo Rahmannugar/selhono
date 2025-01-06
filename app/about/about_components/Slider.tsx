@@ -4,7 +4,8 @@ import { dmSerifFont } from "@/app/util/font";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
+
+import { useState } from "react";
 
 const Slider = () => {
   const sliderImages = [
@@ -32,12 +33,10 @@ const Slider = () => {
 
   const [currentIndex, setCurrentIndex] = useState(2);
   const [direction, setDirection] = useState(0);
-  const [currentPage, setCurrentPage] = useState("");
-  const pathname = usePathname();
-
-  useEffect(() => {
-    setCurrentPage(pathname);
-  }, [pathname]);
+  const currentPage =
+    typeof window !== "undefined" && usePathname() === "/"
+      ? "SELHONO"
+      : "ABOUT US";
 
   const handleNext = () => {
     setDirection(1);
@@ -158,7 +157,7 @@ const Slider = () => {
           <h1
             className={`${dmSerifFont.className} text-white text-[2.188rem] sm:text-[2.5rem] md:text-[3.125rem] lg:text-[4.375rem]`}
           >
-            {currentPage === "/" ? "SELHONO" : " ABOUT US"}
+            {currentPage}
           </h1>
 
           {/* slider dots */}
