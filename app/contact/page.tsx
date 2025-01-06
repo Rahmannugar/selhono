@@ -18,7 +18,7 @@ const page = async () => {
       </div>
       <div className="xl:px-20 px-5 lg:px-16 2xl:flex 2xl:flex-col 2xl:justify-center 2xl:items-center sm:px-10">
         <Contact />
-        <div className="my-20 w-full">
+        <div className="mt-20 mb-10 w-full">
           <Map center={mapData.center} />
         </div>
       </div>
