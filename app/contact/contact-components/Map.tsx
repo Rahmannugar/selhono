@@ -1,7 +1,7 @@
 "use client";
 
 import { GoogleMap, useJsApiLoader, MarkerF } from "@react-google-maps/api";
-import { memo, useCallback, useState } from "react";
+import { memo, useCallback } from "react";
 
 const Map = () => {
   const containerStyle = {
@@ -20,15 +20,8 @@ const Map = () => {
     googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY!,
   });
 
-  const [map, setMap] = useState<google.maps.Map | null>(null);
-
-  const onLoad = useCallback(function callback(map: google.maps.Map) {
-    map.setZoom(15);
-    setMap(map);
-  }, []);
-
-  const onUnmount = useCallback(() => {
-    setMap(null);
+  const onLoad = useCallback((mapInstance: google.maps.Map) => {
+    mapInstance.setZoom(15);
   }, []);
 
   return isLoaded ? (
@@ -37,7 +30,6 @@ const Map = () => {
       center={center}
       zoom={15}
       onLoad={onLoad}
-      onUnmount={onUnmount}
     >
       <MarkerF position={center} title="Long Island University Brooklyn" />
     </GoogleMap>
