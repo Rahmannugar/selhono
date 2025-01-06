@@ -47,7 +47,7 @@ const FollowCursor: React.FC<FollowCursorProps> = ({
     let animationFrame: number;
     let width = window.innerWidth;
     let height = window.innerHeight;
-    let cursor = { x: width / 2, y: height / 2 };
+    const cursor = { x: width / 2, y: height / 2 };
     const prefersReducedMotion = window.matchMedia(
       "(prefers-reduced-motion: reduce)"
     );
