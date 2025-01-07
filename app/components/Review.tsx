@@ -42,7 +42,7 @@ const Review = () => {
           {testimonial.map((testimony) => (
             <div
               key={testimony.id}
-              className={`bg-white shadow-md  group hover:text-[#C76904] hover:bg-[#f6f5f5] ease-in transition-all duration-300 rounded-[2.5rem] cursor-pointer space-y-5 lg:h-[21.188rem] h-[15.625rem] sm:max-w-[18.75rem] lg:max-w-[23.125rem] w-full flex flex-col px-5 lg:px-10 py-5 lg:py-12 ${
+              className={`bg-white shadow-md group hover:text-[#C76904] hover:bg-[#f6f5f5] ease-in transition-all duration-300 rounded-[2.5rem] cursor-pointer space-y-5 lg:h-[21.188rem] h-[15.625rem] sm:max-w-[18.75rem] lg:max-w-[23.125rem] w-full flex flex-col px-5 lg:px-10 py-5 lg:py-12 ${
                 testimony.id == 2 ? "sm:mx-[50%] lg:mx-0" : ""
               }`}
             >
