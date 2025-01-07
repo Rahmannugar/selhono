@@ -31,11 +31,12 @@ const ServiceDetails = () => {
   return (
     <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 sm:gap-x-10 my-10">
       {servicesArray.map((service) => (
-        <Link href="/services/single-service">
-          <div
-            key={service.id}
-            className="max-w-[358px] mx-auto py-10 w-full flex flex-col justify-center items-center hover:text-[#C76904] hover:bg-[#F9F9F9] rounded-[30px] ease-in transition-all duration-300"
-          >
+        <div
+          key={service.id}
+          className="max-w-[358px] mx-auto py-10 w-full flex flex-col justify-center items-center hover:text-[#C76904] hover:bg-[#F9F9F9] rounded-[30px] ease-in transition-all duration-300"
+        >
+          {" "}
+          <Link href="/services/single-service">
             <h2
               className={`${dmSerifFont.className} text-[18px] md:text-[20px] lg:text-[25px]`}
             >
@@ -53,8 +54,8 @@ const ServiceDetails = () => {
             >
               Read More
             </button>
-          </div>
-        </Link>
+          </Link>
+        </div>
       ))}
     </section>
   );
