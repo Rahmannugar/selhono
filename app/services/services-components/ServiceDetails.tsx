@@ -33,24 +33,23 @@ const ServiceDetails = () => {
       {servicesArray.map((service) => (
         <div
           key={service.id}
-          className="max-w-[358px] mx-auto py-10 w-full flex flex-col justify-center items-center hover:text-[#C76904] hover:bg-[#F9F9F9] rounded-[30px] ease-in transition-all duration-300"
+          className="max-w-[22.375rem] mx-auto py-10 w-full flex flex-col justify-center text-center items-center hover:text-[#C76904] hover:bg-[#F9F9F9] rounded-[1.875rem] ease-in transition-all duration-300"
         >
-          {" "}
           <Link href="/services/single-service">
             <h2
-              className={`${dmSerifFont.className} text-[18px] md:text-[20px] lg:text-[25px]`}
+              className={`${dmSerifFont.className} text-[1.25rem] lg:text-[1.563rem]`}
             >
               {service.title}
             </h2>
             <p
-              className={`${jostFont.className} md:text-[18px] lg:text-[22px] text-center mt-3 lg:mt-5`}
+              className={`${jostFont.className} text-[1.125rem] lg:text-[1.375rem] text-center mt-3 lg:mt-5`}
             >
               There are many variations of the passages of lorem Ipsum from
               available, majority.
             </p>
 
             <button
-              className={`font-semibold md:text-[18px] mt-7 lg:mt-10 ${jostFont.className}`}
+              className={`font-semibold text-[1.125rem] mt-7 lg:mt-10 ${jostFont.className}`}
             >
               Read More
             </button>

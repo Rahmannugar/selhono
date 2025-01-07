@@ -9,7 +9,8 @@ const Footer = () => {
   const validRoutes = [
     "/",
     "/about",
-    "services",
+    "/services",
+    "/single-service",
     "/project",
     "/blog",
     "/contact",

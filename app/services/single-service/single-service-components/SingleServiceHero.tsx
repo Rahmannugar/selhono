@@ -1,13 +1,13 @@
 import { dmSerifFont } from "@/app/util/font";
 import Image from "next/image";
 
-const ServiceHero = () => {
+const SingleServiceHero = () => {
   return (
     <section className="relative">
       <div className="relative w-full h-[22.25rem]">
         <Image
-          src="/images/services.jpg"
-          alt="services"
+          src="/images/single-service.jpg"
+          alt="single-service"
           fill
           priority
           className="object-cover"
@@ -17,10 +17,10 @@ const ServiceHero = () => {
         <h1
           className={`${dmSerifFont.className} text-white text-[2.188rem] sm:text-[2.5rem] md:text-[3.125rem] lg:text-[4.375rem]`}
         >
-          SERVICES
+          SINGLE SERVICE
         </h1>
       </div>
     </section>
   );
 };
-export default ServiceHero;
+export default SingleServiceHero;
