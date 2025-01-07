@@ -49,7 +49,7 @@ const TeamSection = () => {
       <div className="grid sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-y-16 sm:gap-x-6">
         {team.map((member) => (
           <div key={member.id} className="space-y-4">
-            <div className="relative w-full mx-auto max-w-[19.25rem] h-[29.375rem] sm:h-[500px] md:h-[25rem] lg:h-[30.625rem] xl:h-[29.375rem] 2xl:w-[19.25rem]">
+            <div className="relative w-full mx-auto max-w-[19.25rem] h-[29.375rem] sm:h-[31.25rem] md:h-[25rem] lg:h-[30.625rem] xl:h-[29.375rem] 2xl:w-[19.25rem]">
               <Image
                 src={member.url}
                 alt={member.name}

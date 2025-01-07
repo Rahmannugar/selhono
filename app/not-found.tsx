@@ -10,7 +10,7 @@ const NotFound = () => {
         >
           404
         </h1>
-        <h2 className="text-[#292F36] max-w-[569px] text-[1.125rem] md:text-[1.875rem] lg::text-[2.188rem]">
+        <h2 className="text-[#292F36] max-w-[35.563rem] text-[1.125rem] md:text-[1.875rem] lg::text-[2.188rem]">
           We are sorry, but the page you requested for was not found!
         </h2>
         <Link href="/">

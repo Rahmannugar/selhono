@@ -10,14 +10,14 @@ const Footer = () => {
     "/",
     "/about",
     "/services",
-    "/single-service",
     "/project",
     "/blog",
     "/contact",
     "/team",
   ];
 
-  const is404 = pathname && !validRoutes.includes(pathname);
+  const is404 =
+    pathname && !validRoutes.some((route) => pathname.startsWith(route));
 
   if (is404) {
     return null;
