@@ -24,18 +24,18 @@ const Work = () => {
       <ul className="sm:flex space-y-10 sm:space-y-0 sm:justify-center border-2 rounded-xl shadow-sm p-5 sm:space-x-5 md:space-x-10 sm:items-center">
         {works.map((work) => (
           <li
-            className="flex flex-col justify-center border p-3 shadow-sm items-center text-center"
+            className="flex flex-col justify-center border p-3 shadow-sm items-center text-center group hover:text-[#C76904] hover:bg-[#F9F9F9] ease-in transition-all duration-300"
             key={work.id}
           >
             <Link href="/services">
               <div className="space-y-3 lg:space-y-4">
                 <h1
-                  className={`${dmSerifFont.className} text-[#292F36] text-lg lg:text-[1.563rem]`}
+                  className={`${dmSerifFont.className} text-[#292F36] group-hover:text-[#C76904] text-lg lg:text-[1.563rem]`}
                 >
                   {work.title}
                 </h1>
                 <p
-                  className={`${jostFont.className} text-[#4D5053] lg:max-w-[22.375rem] lg:text-[1.375rem]`}
+                  className={`${jostFont.className} text-[#4D5053] lg:max-w-[22.375rem] group-hover:text-[#C76904] lg:text-[1.375rem]`}
                 >
                   {work.body}
                 </p>

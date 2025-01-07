@@ -1,5 +1,6 @@
 import { dmSerifFont, jostFont } from "@/app/util/font";
 import Image from "next/image";
+import Link from "next/link";
 
 const Quotes = () => {
   return (
@@ -31,9 +32,11 @@ const Quotes = () => {
               the of readable content of a page when lookings at its layouts the
               points of using that it has a more-or-less normal.
             </p>
-            <button className="sm:rounded-[1.125rem] sm:self-start mt-7 md:mt-10 text-white bg-[#292F36] py-3 px-4 lg:py-5 lg:px-8 shadow-md hover:bg-gray-900 transition-all duration-300">
-              <h2>Our Concept</h2>
-            </button>
+            <Link href="/services">
+              <button className="sm:rounded-[1.125rem] sm:self-start mt-7 md:mt-10 text-white bg-[#292F36] py-3 px-4 lg:py-5 lg:px-8 shadow-md hover:bg-gray-900 transition-all duration-300">
+                Our Concept
+              </button>
+            </Link>
           </div>
           <div className="relative w-full sm:max-w-[37.5rem] 2xl:w-[44.875rem] h-[23.75rem] md:h-[31.25rem]">
             <Image
@@ -67,9 +70,11 @@ const Quotes = () => {
               the of readable content of a page when lookings at its layouts the
               points of using that it has a more-or-less normal.
             </p>
-            <button className="sm:rounded-[1.125rem] sm:self-start mt-7 md:mt-10 text-white bg-[#292F36] py-3 px-4 lg:py-5 lg:px-8 shadow-md hover:bg-gray-900 transition-all duration-300">
-              <h2>Our Portfolio</h2>
-            </button>
+            <Link href="/services">
+              <button className="sm:rounded-[1.125rem] sm:self-start mt-7 md:mt-10 text-white bg-[#292F36] py-3 px-4 lg:py-5 lg:px-8 shadow-md hover:bg-gray-900 transition-all duration-300">
+                <h2>Our Portfolio</h2>
+              </button>
+            </Link>
           </div>
         </div>
       </article>

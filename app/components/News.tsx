@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { dmSerifFont, jostFont } from "../util/font";
+import Link from "next/link";
 
 const News = () => {
   const blogItems = [
@@ -50,54 +51,56 @@ const News = () => {
               blogItem.id == 2 ? "sm:mx-[50%] lg:mx-0" : ""
             }`}
           >
-            <div className="relative">
-              <div className="relative w-full h-[16.875rem] sm:h-[15.625rem] md:h-[18.063rem]">
-                <Image
-                  src={blogItem.image}
-                  alt={blogItem.label}
-                  fill
-                  className="rounded-t-[3.125rem]"
-                />
+            <Link href="/blog">
+              <div className="relative">
+                <div className="relative w-full h-[16.875rem] sm:h-[15.625rem] md:h-[18.063rem]">
+                  <Image
+                    src={blogItem.image}
+                    alt={blogItem.label}
+                    fill
+                    className="rounded-t-[3.125rem]"
+                  />
+                </div>
+                <h1
+                  className={`absolute bottom-5 left-5 px-4 rounded-r-[0.5rem] rounded-tl-[0.5rem] py-2  bg-black/50 text-white ${jostFont.className}`}
+                >
+                  {blogItem.label}
+                </h1>
               </div>
-              <h1
-                className={`absolute bottom-5 left-5 px-4 rounded-r-[0.5rem] rounded-tl-[0.5rem] py-2  bg-black/50 text-white ${jostFont.className}`}
-              >
-                {blogItem.label}
-              </h1>
-            </div>
 
-            <div className="mt-2 flex flex-col justify-between flex-grow">
-              <h1
-                className={`${dmSerifFont.className} text-[1rem] lg:text-[1.375rem] xl:text-[1.563rem] max-w-[18.75rem] text-[#292F36]`}
-              >
-                {blogItem.title}
-              </h1>
+              <div className="mt-2 flex flex-col justify-between flex-grow">
+                <h1
+                  className={`${dmSerifFont.className} text-[1rem] lg:text-[1.375rem] xl:text-[1.563rem] max-w-[18.75rem] text-[#292F36]`}
+                >
+                  {blogItem.title}
+                </h1>
 
-              <div className="flex justify-between items-center w-full mt-auto text-[0.875rem] lg:text-[1rem]">
-                <h2 className={`${jostFont.className} text-[#4D5053]`}>
-                  {blogItem.date}
-                </h2>
+                <div className="flex justify-between items-center w-full mt-auto text-[0.875rem] lg:text-[1rem]">
+                  <h2 className={`${jostFont.className} text-[#4D5053]`}>
+                    {blogItem.date}
+                  </h2>
 
-                <div className="flex justify-center items-center w-[2.5rem] h-[2.5rem] lg:w-[2.813rem] lg:h-[2.813rem] xl:w-[3.25rem] xl:h-[3.25rem] bg-[#D8A876] duration-300 ease-in group-hover:bg-[#C76904] rounded-full">
-                  <svg
-                    width="10"
-                    height="20"
-                    viewBox="0 0 10 20"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path d="M1 19L9 10L0.999999 1" fill="#D8A876" />
-                    <path
-                      d="M1 19L9 10L1 1"
-                      stroke="white"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
+                  <div className="flex justify-center items-center w-[2.5rem] h-[2.5rem] lg:w-[2.813rem] lg:h-[2.813rem] xl:w-[3.25rem] xl:h-[3.25rem] bg-[#D8A876] duration-300 ease-in group-hover:bg-[#C76904] rounded-full">
+                    <svg
+                      width="10"
+                      height="20"
+                      viewBox="0 0 10 20"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path d="M1 19L9 10L0.999999 1" fill="#D8A876" />
+                      <path
+                        d="M1 19L9 10L1 1"
+                        stroke="white"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                  </div>
                 </div>
               </div>
-            </div>
+            </Link>
           </div>
         ))}
       </article>

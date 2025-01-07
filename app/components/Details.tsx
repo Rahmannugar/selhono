@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { dmSerifFont, interFont, jostFont } from "../util/font";
+import Link from "next/link";
 
 const Details = () => {
   return (
@@ -55,11 +56,13 @@ const Details = () => {
             </div>
           </div>
 
-          <button
-            className={`${interFont.className} bg-[#CDA274] hover:bg-[#7a552e] mt-7 sm:mt-10 lg:mt-14 duration-200 font-medium ease-in rounded-[1.125rem] text-white flex items-center justify-center space-x-3 py-4 lg:py-6 px-5 text-sm md:text-lg`}
-          >
-            <h1 id="Get Free Estimate">Get Free Estimate</h1>
-          </button>
+          <Link href="/contact">
+            <button
+              className={`${interFont.className} bg-[#CDA274] hover:bg-[#7a552e] mt-7 sm:mt-10 lg:mt-14 duration-200 font-medium ease-in rounded-[1.125rem] text-white flex items-center justify-center space-x-3 py-4 lg:py-6 px-5 text-sm md:text-lg`}
+            >
+              <h1 id="Get Free Estimate">Get Free Estimate</h1>
+            </button>
+          </Link>
         </div>
       </div>
 
