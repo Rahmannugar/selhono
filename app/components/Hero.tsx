@@ -14,8 +14,9 @@ const Hero = () => {
           className="object-cover rounded-tl-[5rem] rounded-br-[5rem]"
         />
       </div>
+      <div className="absolute inset-0 bg-black bg-opacity-20 rounded-tl-[6rem] rounded-br-[6rem]"></div>
 
-      <div className="absolute top-28 md:top-16 left-5 md:left-7 space-y-5">
+      <div className="absolute top-28 md:top-16 z-10 left-5 md:left-7 space-y-5">
         <div className={`text-white space-y-2 `}>
           <h1
             className={`xl:text-[4.063rem] lg:text-[3.438rem] md:text-[2.5rem] text-[1.5rem] sm:text-[2.188rem] ${dmSerifFont.className}`}

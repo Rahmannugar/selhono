@@ -120,6 +120,8 @@ const Slider = () => {
         ))}
       </div>
 
+      <div className="absolute inset-0 bg-black bg-opacity-20"></div>
+
       <div className="flex justify-between items-center w-full z-20 absolute top-[40%] px-5 md:px-10">
         {/* left slider */}
         <div className="cursor-pointer" onClick={handlePrevious}>
@@ -153,7 +155,7 @@ const Slider = () => {
         </div>
       </div>
 
-      <div className="absolute top-[45%] left-0 right-0">
+      <div className="absolute top-[45%] z-10 left-0 right-0">
         <div className="flex flex-col items-center space-y-40 md:space-y-24 lg:space-y-12 w-full">
           <h1
             className={`${dmSerifFont.className} text-white text-[2.188rem] sm:text-[2.5rem] md:text-[3.125rem] lg:text-[4.375rem]`}
