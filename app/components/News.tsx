@@ -7,21 +7,21 @@ const News = () => {
     {
       id: 0,
       label: "Kitchen Design",
-      image: "/images/blog-1.png",
+      image: "/images/news-1.png",
       title: "Let’s Get Solution For Building Construction Work",
       date: "26 December, 2022 ",
     },
     {
       id: 1,
       label: "Living Design",
-      image: "/images/blog-2.png",
+      image: "/images/news-2.png",
       title: "Low Cost Latest Invented Interior Designing Ideas.",
       date: "22 November, 2023 ",
     },
     {
       id: 2,
       label: "Interior Design",
-      image: "/images/blog-3.png",
+      image: "/images/news-3.png",
       title: "Best For Any Office & Business Interior Solution",
       date: "4 December, 2023 ",
     },
@@ -75,12 +75,14 @@ const News = () => {
                   {blogItem.title}
                 </h1>
 
-                <div className="flex justify-between items-center w-full mt-auto text-[0.875rem] lg:text-[1rem]">
-                  <h2 className={`${jostFont.className} text-[#4D5053]`}>
+                <div className="flex justify-between items-center w-full mt-auto">
+                  <h2
+                    className={`${jostFont.className} text-[#4D5053] text-[0.875rem] lg:text-[1rem]`}
+                  >
                     {blogItem.date}
                   </h2>
 
-                  <div className="flex justify-center items-center w-[2.5rem] h-[2.5rem] lg:w-[2.813rem] lg:h-[2.813rem] xl:w-[3.25rem] xl:h-[3.25rem] bg-[#D8A876] duration-300 ease-in group-hover:bg-[#C76904] rounded-full">
+                  <div className="flex justify-center cursor-pointer items-center w-[2.5rem] h-[2.5rem] lg:w-[2.813rem] lg:h-[2.813rem] xl:w-[3.25rem] xl:h-[3.25rem] bg-[#D8A876] duration-300 ease-in group-hover:bg-[#C76904] rounded-full">
                     <svg
                       width="10"
                       height="20"
