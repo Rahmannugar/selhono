@@ -25,7 +25,7 @@ const Mart = () => {
     },
   ];
   return (
-    <section>
+    <section className="lg:flex lg:flex-col lg:justify-center lg:items-center">
       <article className="text-center flex flex-col justify-center items-center">
         <h1
           className={`text-[#292F36] text-[1.5rem] md:text-[2.5rem] lg:text-[3.438rem] xl:text-[3.75rem] ${dmSerifFont.className}`}
@@ -43,11 +43,11 @@ const Mart = () => {
       <article className="grid grid-cols-1 gap-16 xl:gap-20 sm:grid-cols-2 py-20 md:py-28">
         {martItems.map((martItem) => (
           <div className="space-y-3" key={martItem.id}>
-            <div className="relative w-full min-w-[15.625rem] h-[22.5rem] sm:h-[18.75rem] md:h-[23.75rem] md:min-w-[20rem] lg:max-w-[30rem] lg:h-[26.25rem] xl:max-w-[34.188rem] xl:h-[34.25rem]">
+            <div className="relative w-full min-w-[15.625rem] h-[22.5rem] sm:h-[18.75rem] md:h-[23.75rem] md:min-w-[20rem] lg:w-[28rem] lg:h-[26.25rem] xl:w-[34.188rem] xl:h-[34.25rem]">
               <Image src={martItem.image} alt={martItem.name} fill priority />
             </div>
 
-            <div className="flex justify-between md:min-w-[20rem] lg:max-w-[30rem] xl:w-[34.188rem]">
+            <div className="flex justify-between md:min-w-[20rem] lg:w-[28rem] xl:w-[34.188rem]">
               <div>
                 <h1
                   className={`${dmSerifFont.className} text-[#292F36] text-[1.125rem] lg:text-[1.563rem]`}

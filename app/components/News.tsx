@@ -43,7 +43,7 @@ const News = () => {
         </p>
       </article>
 
-      <article className="grid grid-cols-1 mt-16 md:mt-28 sm:grid-cols-2 lg:grid-cols-3 gap-10 w-full max-w-[75.625rem]">
+      <article className="grid grid-cols-1 mt-16 md:mt-28 sm:grid-cols-2 lg:grid-cols-3 gap-10 w-full mx-auto max-w-[75.625rem]">
         {blogItems.map((blogItem) => (
           <div
             key={blogItem.id}

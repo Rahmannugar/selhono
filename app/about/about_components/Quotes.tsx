@@ -17,7 +17,7 @@ const Quotes = () => {
         </h2>
       </article>
 
-      <article className="mt-28 md:mt-32 flex flex-col space-y-24 lg:space-y-32">
+      <article className="mt-28 md:mt-32 flex flex-col mx-auto w-full space-y-24 lg:space-y-32">
         <div className="flex flex-col-reverse sm:flex-row sm:justify-center sm:items-center sm:space-x-10 lg:space-x-16">
           <div className="text-justify flex flex-col mx-auto mt-5 md:mt-0">
             <h1

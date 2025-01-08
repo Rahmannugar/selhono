@@ -24,7 +24,7 @@ const Footer = () => {
   }
 
   return (
-    <footer className="max-w-[75.625rem] space-y-16 md:space-y-20 lg:space-y-28 mt-20 md:mt-10 mb-4">
+    <footer className="max-w-[75.625rem] space-y-16 md:space-y-20 mx-auto lg:space-y-28 mt-20 md:mt-10 mb-4">
       {/* < md screens */}
       <div className="mt-10 md:hidden block">
         <Link href="/">

@@ -34,7 +34,7 @@ const Count = () => {
   return (
     <section
       ref={sectionRef}
-      className="mt-10 md:mt-16 lg:mt-36 flex justify-between space-x-1 text-center items-center w-full lg:max-w-[65.438rem]"
+      className="mt-10 md:mt-16 lg:mt-36 flex justify-between mx-auto space-x-1 text-center items-center w-full lg:max-w-[65.438rem]"
     >
       <div
         className={`text-[1.5rem] sm:text-[1.875rem] md:text-[2.5rem] lg:text-[3.75rem] xl:text-[5.313rem] text-[#CDA274] ${dmSerifFont.className}`}
