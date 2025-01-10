@@ -7,7 +7,7 @@ const BlogHero = () => {
       <div className="relative w-full h-[22.25rem]">
         <Image
           src="/images/blog.jpg"
-          alt="services"
+          alt="blog"
           fill
           priority
           className="object-cover"

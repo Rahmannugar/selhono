@@ -9,15 +9,26 @@ export const metadata: Metadata = {
     default: "Selhono",
     template: "%s - Selhono",
   },
-  description: "Welcome to Selhono Interior Designs",
+  description:
+    "Selhono Designs is a company specializing in innovative interior designs, including bathroom, bedroom, and living room concepts.",
+
   twitter: {
     card: "summary_large_image",
+    creator: "@nugarRahman",
+  },
+  openGraph: {
+    type: "website",
+    url: "https://selhonointeriors.vercel.app",
   },
   keywords: [
-    "selhono",
+    "Selhono",
     "interior designs",
     "bathroom designs",
     "bedroom designs",
+    "living room designs",
+    "modern interiors",
+    "home decor",
+    "furniture designs",
   ],
 };
 
