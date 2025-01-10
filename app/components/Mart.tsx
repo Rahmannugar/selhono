@@ -6,22 +6,26 @@ const Mart = () => {
     {
       id: 0,
       name: "mart-1",
-      image: "/images/mart-1.png",
+      image:
+        "https://res.cloudinary.com/thirtythree/image/upload/q_auto,f_auto/v1736506888/mart-1_g5p1yv.png",
     },
     {
       id: 1,
       name: "mart-2",
-      image: "/images/mart-2.png",
+      image:
+        "https://res.cloudinary.com/thirtythree/image/upload/q_auto,f_auto/v1736506892/mart-2_z4ba4y.png",
     },
     {
       id: 2,
       name: "mart-3",
-      image: "/images/mart-3.png",
+      image:
+        "https://res.cloudinary.com/thirtythree/image/upload/q_auto,f_auto/v1736507197/mart-3_wlhcsz.png",
     },
     {
       id: 3,
       name: "mart-4",
-      image: "/images/mart-4.png",
+      image:
+        "https://res.cloudinary.com/thirtythree/image/upload/q_auto,f_auto/v1736507197/mart-4_lohbkd.png",
     },
   ];
   return (

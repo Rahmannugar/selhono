@@ -10,23 +10,23 @@ const Slider = () => {
   const sliderImages = [
     {
       name: "about-1",
-      url: "/images/about-1.jpg",
+      url: "https://res.cloudinary.com/thirtythree/image/upload/q_auto,f_auto/v1736506766/about-1_iqiiyj.jpg",
     },
     {
       name: "about-2",
-      url: "/images/about-2.jpg",
+      url: "https://res.cloudinary.com/thirtythree/image/upload/q_auto,f_auto/v1736506768/about-2_i5htrn.jpg",
     },
     {
       name: "about-3",
-      url: "/images/about-3.jpg",
+      url: "https://res.cloudinary.com/thirtythree/image/upload/q_auto,f_auto/v1736506770/about-3_pw26qw.jpg",
     },
     {
       name: "about-4",
-      url: "/images/about-4.jpg",
+      url: "https://res.cloudinary.com/thirtythree/image/upload/q_auto,f_auto/v1736506774/about-4_ikdrb8.jpg",
     },
     {
       name: "about-5",
-      url: "/images/about-5.jpg",
+      url: "https://res.cloudinary.com/thirtythree/image/upload/q_auto,f_auto/v1736506775/about-5_y5mwbp.jpg",
     },
   ];
 

@@ -6,22 +6,26 @@ const BlogArticle = () => {
     {
       id: 0,
       alt: "blog-1",
-      image: "/images/blog-1.png",
+      image:
+        "https://res.cloudinary.com/thirtythree/image/upload/q_auto,f_auto/v1736506867/blog-1_ujkfm2.png",
     },
     {
       id: 1,
       alt: "blog-2",
-      image: "/images/blog-2.png",
+      image:
+        "https://res.cloudinary.com/thirtythree/image/upload/q_auto,f_auto/v1736506868/blog-2_uixsze.png",
     },
     {
       id: 2,
       alt: "blog-3",
-      image: "/images/blog-3.png",
+      image:
+        "https://res.cloudinary.com/thirtythree/image/upload/q_auto,f_auto/v1736506870/blog-3_wenluq.png",
     },
     {
       id: 3,
       alt: "blog-4",
-      image: "/images/blogpost.jpg",
+      image:
+        "https://res.cloudinary.com/thirtythree/image/upload/q_auto,f_auto/v1736506873/blogpost_ffpzes.jpg",
     },
   ];
   return (

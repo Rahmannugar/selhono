@@ -56,7 +56,7 @@ export default function RootLayout({
           `}
         </script>
       </head>
-      <body className="overflow-hidden">
+      <body className="overflow-x-hidden">
         <FollowCursor />
         <Navbar />
         {children}

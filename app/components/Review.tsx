@@ -9,7 +9,8 @@ const Review = () => {
       location: "Moscow, Russia",
       content:
         "Lorem Ipsum is simply dummy text of the typesetting industry. Ipsum has been.",
-      image: "/images/natasha.png",
+      image:
+        "https://res.cloudinary.com/thirtythree/image/upload/q_auto,f_auto/v1736507198/natasha_d2iiuf.png",
     },
     {
       id: 1,
@@ -17,7 +18,8 @@ const Review = () => {
       location: "London, UK",
       content:
         "Lorem Ipsum is simply dummy text of the typesetting industry. Ipsum has been scrambled it to make a type book.",
-      image: "/images/raymond.png",
+      image:
+        "https://res.cloudinary.com/thirtythree/image/upload/q_auto,f_auto/v1736507976/raymond_yaiijd.png",
     },
     {
       id: 2,
@@ -25,7 +27,8 @@ const Review = () => {
       location: "New York, USA",
       content:
         "Lorem Ipsum is simply dummy text of the typesetting industry. Ipsum has been scrambled.",
-      image: "/images/benny.png",
+      image:
+        "https://res.cloudinary.com/thirtythree/image/upload/q_auto,f_auto/v1736506790/benny_i3kiuh.png",
     },
   ];
   return (

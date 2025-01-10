@@ -35,7 +35,7 @@ const BlogPost = () => {
         <div className="mt-5 sm:flex space-y-7 sm:space-x-10 xl:space-x-16 sm:space-y-0">
           <div className="relative h-[21.875rem] md:h-[25rem] w-full max-w-[40.563rem] xl:w-[40.563rem]">
             <Image
-              src="/images/blogpost.jpg"
+              src="https://res.cloudinary.com/thirtythree/image/upload/q_auto,f_auto/v1736506873/blogpost_ffpzes.jpg"
               alt="blog-post"
               fill
               priority

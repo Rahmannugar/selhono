@@ -7,7 +7,7 @@ const Advert = () => {
     <section className="mt-28 relative text-center flex flex-col justify-center items-center">
       <div className="relative min-w-[18.75rem] w-full h-[15.625rem] sm:h-[18.75rem] md:h-[21.875rem] lg:h-[26.875rem]">
         <Image
-          src="/images/advert.png"
+          src="https://res.cloudinary.com/thirtythree/image/upload/q_auto,f_auto/v1736506784/advert_i9axy3.png"
           alt="advert"
           fill
           className="object-cover"

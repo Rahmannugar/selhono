@@ -23,8 +23,8 @@ const ServiceGallery = () => {
         <div className="sm:flex relative space-y-[-2.5rem] sm:space-y-0 sm:justify-between sm:items-center h-full sm:space-x-10 2xl:space-x-20">
           <div className="relative w-full max-w-[26.563rem] mx-auto sm:max-w-[39.063rem] 2xl:w-[39.063rem] h-[30.313rem]">
             <Image
-              src="/images/services-1.png"
-              alt="services"
+              src="https://res.cloudinary.com/thirtythree/image/upload/q_auto,f_auto/v1736507986/services-1_aw93wt.png"
+              alt="services-1"
               fill
               className="object-contain"
             />
@@ -85,8 +85,8 @@ const ServiceGallery = () => {
           </div>
           <div className="relative w-full max-w-[26.563rem] mx-auto sm:max-w-[39.063rem] 2xl:w-[39.063rem] h-[30.313rem]">
             <Image
-              src="/images/services-2.png"
-              alt="services"
+              src="https://res.cloudinary.com/thirtythree/image/upload/q_auto,f_auto/v1736507987/services-2_l0qwm5.png"
+              alt="services-2"
               fill
               className="object-contain"
             />
@@ -102,8 +102,8 @@ const ServiceGallery = () => {
         <div className="sm:flex relative sm:justify-between space-y-[-2.5rem] sm:space-y-0 sm:items-center h-full sm:space-x-10 2xl:space-x-20">
           <div className="relative w-full max-w-[26.563rem] mx-auto sm:max-w-[39.063rem] 2xl:w-[39.063rem] h-[30.313rem]">
             <Image
-              src="/images/services-3.png"
-              alt="services"
+              src="https://res.cloudinary.com/thirtythree/image/upload/q_auto,f_auto/v1736508366/services-3_qi4xts.png"
+              alt="services-3"
               fill
               className="object-contain"
             />
@@ -164,8 +164,8 @@ const ServiceGallery = () => {
           </div>
           <div className="relative w-full max-w-[26.563rem] mx-auto sm:max-w-[39.063rem] 2xl:w-[39.063rem] h-[30.313rem]">
             <Image
-              src="/images/services-2.png"
-              alt="services"
+              src="https://res.cloudinary.com/thirtythree/image/upload/q_auto,f_auto/v1736508370/services-4_ohc8yt.png"
+              alt="services-4"
               fill
               className="object-contain"
             />

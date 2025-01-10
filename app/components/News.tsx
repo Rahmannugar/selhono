@@ -7,21 +7,24 @@ const News = () => {
     {
       id: 0,
       label: "Kitchen Design",
-      image: "/images/news-1.png",
+      image:
+        "https://res.cloudinary.com/thirtythree/image/upload/q_auto,f_auto/v1736507578/news-1_jhzplz.png",
       title: "Let’s Get Solution For Building Construction Work",
       date: "26 December, 2022 ",
     },
     {
       id: 1,
       label: "Living Design",
-      image: "/images/news-2.png",
+      image:
+        "https://res.cloudinary.com/thirtythree/image/upload/q_auto,f_auto/v1736507969/news-2_u6uyag.png",
       title: "Low Cost Latest Invented Interior Designing Ideas.",
       date: "22 November, 2023 ",
     },
     {
       id: 2,
       label: "Interior Design",
-      image: "/images/news-3.png",
+      image:
+        "https://res.cloudinary.com/thirtythree/image/upload/q_auto,f_auto/v1736507970/news-3_qtwl9r.png",
       title: "Best For Any Office & Business Interior Solution",
       date: "4 December, 2023 ",
     },

@@ -6,7 +6,7 @@ const BlogHero = () => {
     <section className="relative">
       <div className="relative w-full h-[22.25rem]">
         <Image
-          src="/images/blog.jpg"
+          src="https://res.cloudinary.com/thirtythree/image/upload/q_auto,f_auto/v1736506867/blog_vs0lha.jpg"
           alt="blog"
           fill
           priority

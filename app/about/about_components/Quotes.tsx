@@ -40,7 +40,7 @@ const Quotes = () => {
           </div>
           <div className="relative w-full sm:max-w-[37.5rem] 2xl:w-[44.875rem] h-[23.75rem] md:h-[31.25rem]">
             <Image
-              src="/images/quotes-1.jpg"
+              src="https://res.cloudinary.com/thirtythree/image/upload/q_auto,f_auto/v1736507972/quotes-1_qm8akh.jpg"
               alt="quotes-1"
               fill
               className="object-cover rounded-tl-[6.25rem]"
@@ -51,8 +51,8 @@ const Quotes = () => {
         <div className="flex flex-col sm:flex-row sm:justify-center sm:items-center sm:space-x-10 lg:space-x-16">
           <div className="relative w-full sm:max-w-[37.5rem] 2xl:w-[44.875rem] h-[23.75rem] md:h-[31.25rem]">
             <Image
-              src="/images/quotes-2.jpg"
-              alt="quotes-1"
+              src="https://res.cloudinary.com/thirtythree/image/upload/q_auto,f_auto/v1736507974/quotes-2_wahqd3.jpg"
+              alt="quotes-2"
               fill
               className="object-cover rounded-tr-[6.25rem]"
             />

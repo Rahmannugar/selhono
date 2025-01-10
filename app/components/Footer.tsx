@@ -103,7 +103,7 @@ const Footer = () => {
           </Link>
 
           {/* instagram */}
-          <Link href="/">
+          <Link href="/" aria-label="Instagram">
             <svg
               width="17"
               height="18"

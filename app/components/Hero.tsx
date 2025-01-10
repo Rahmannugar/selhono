@@ -7,7 +7,7 @@ const Hero = () => {
     <section className="relative">
       <div className="h-[37.5rem] lg:h-[47.375rem] w-full max-w-[96rem] 2xl:w-[75.625rem] relative">
         <Image
-          src="/images/hero.png"
+          src="https://res.cloudinary.com/thirtythree/image/upload/q_auto,f_auto/v1736506886/hero_zn4f1v.png"
           alt="hero-image"
           fill
           priority

@@ -6,42 +6,42 @@ const TeamSection = () => {
     {
       id: 0,
       name: "Alex Johnson",
-      url: "/images/team-1.png",
+      url: "https://res.cloudinary.com/thirtythree/image/upload/q_auto,f_auto/v1736508382/team-1_c0isno.png",
     },
     {
       id: 1,
       name: "Natasha Julie",
-      url: "/images/team-2.png",
+      url: "https://res.cloudinary.com/thirtythree/image/upload/q_auto,f_auto/v1736508376/team-2_zmsp9v.png",
     },
     {
       id: 2,
       name: "John Smith",
-      url: "/images/team-3.png",
+      url: "https://res.cloudinary.com/thirtythree/image/upload/q_auto,f_auto/v1736508378/team-3_x8zo7l.png",
     },
     {
       id: 3,
       name: "Nora Owen",
-      url: "/images/team-4.png",
+      url: "https://res.cloudinary.com/thirtythree/image/upload/q_auto,f_auto/v1736508489/team-4_oxgmfe.png",
     },
     {
       id: 4,
       name: "Parker Carter",
-      url: "/images/team-5.png",
+      url: "https://res.cloudinary.com/thirtythree/image/upload/q_auto,f_auto/v1736508489/team-5_mzglfn.png",
     },
     {
       id: 5,
       name: "Avery Jackson",
-      url: "/images/team-6.png",
+      url: "/https://res.cloudinary.com/thirtythree/image/upload/q_auto,f_auto/v1736508490/team-6_auymoq.png",
     },
     {
       id: 6,
       name: "Luna James",
-      url: "/images/team-7.png",
+      url: "https://res.cloudinary.com/thirtythree/image/upload/q_auto,f_auto/v1736508669/team-7_lzhmkz.png",
     },
     {
       id: 7,
       name: "Gianna Mateo",
-      url: "/images/team-8.png",
+      url: "https://res.cloudinary.com/thirtythree/image/upload/q_auto,f_auto/v1736508961/team-8_jkjepr.png",
     },
   ];
   return (

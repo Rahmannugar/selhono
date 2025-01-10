@@ -6,7 +6,7 @@ const TeamHero = () => {
     <section className="relative">
       <div className="relative w-full h-[22.25rem]">
         <Image
-          src="/images/team.jpg"
+          src="https://res.cloudinary.com/thirtythree/image/upload/q_auto,f_auto/v1736508374/team_adryuo.jpg"
           alt="team"
           fill
           priority

@@ -9,7 +9,7 @@ const page = async () => {
     <main>
       <div className="relative w-full h-[22.25rem]">
         <Image
-          src="/images/contact.jpg"
+          src="https://res.cloudinary.com/thirtythree/image/upload/v1736506878/contact_htrk6v.jpg"
           alt="contact"
           fill
           priority

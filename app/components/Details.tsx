@@ -8,7 +8,7 @@ const Details = () => {
       <div className="relative">
         <div className="relative h-[25rem] w-full sm:w-[20rem] md:w-[27rem] md:h-[35rem] lg:w-[36rem] xl:w-[40.813rem] lg:h-[43.75rem]">
           <Image
-            src="/images/details-1.png"
+            src="https://res.cloudinary.com/thirtythree/image/upload/q_auto,f_auto/v1736506881/details-1_yw687b.png"
             alt="detail-1"
             fill
             className="object-fill"
@@ -68,7 +68,7 @@ const Details = () => {
 
       <div className="relative h-[25rem] sm:w-[25rem] hidden sm:block md:w-[35rem] md:h-[35rem] lg:w-[39rem] xl:w-[45.813rem] lg:h-[43.75rem]">
         <Image
-          src="/images/details-2.png"
+          src="https://res.cloudinary.com/thirtythree/image/upload/q_auto,f_auto/v1736506884/details-2_l80d4f.png"
           alt="detail-2"
           fill
           className="object-fill"
