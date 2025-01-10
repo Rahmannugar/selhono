@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import "./globals.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -37,13 +38,31 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const trackingId = process.env.NEXT_PUBLIC_GA_TRACKING_ID;
+
   return (
     <html lang="en">
-      <body>
+      <head>
+        {/* Google Analytics script */}
+        <Script
+          async
+          src={`https://www.googletagmanager.com/gtag/js?id=${trackingId}`}
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${trackingId}');
+          `}
+        </Script>
+      </head>
+      <body className="overflow-hidden">
         <FollowCursor />
         <Navbar />
         {children}
-        <div className="overflow-hidden xl:px-20 px-5 lg:px-16 2xl:flex 2xl:flex-col 2xl:justify-center 2xl:items-center sm:px-10">
+        <div>
           <Footer />
         </div>
       </body>
