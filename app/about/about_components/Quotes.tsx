@@ -32,7 +32,7 @@ const Quotes = () => {
               the of readable content of a page when lookings at its layouts the
               points of using that it has a more-or-less normal.
             </p>
-            <Link href="/services" aria-label="services">
+            <Link href="/services">
               <button className="sm:rounded-[1.125rem] sm:self-start mt-7 md:mt-10 text-white bg-[#292F36] py-3 px-4 lg:py-5 lg:px-8 shadow-md hover:bg-gray-900 transition-all duration-300">
                 Our Concept
               </button>

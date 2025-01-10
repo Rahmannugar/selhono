@@ -160,7 +160,7 @@ const Navbar = () => {
 
         {/* mobile navtools */}
         <motion.button
-          aria-label="nav-btn"
+          aria-label="navbar"
           aria-controls="mobile-navigation"
           onClick={handleNav}
           className="md:hidden"

@@ -39,10 +39,7 @@ const Contact = () => {
                 stroke-linejoin="round"
               />
             </svg>
-            <h3
-              aria-label="selhono-email"
-              className="md:text-[1.125rem] lg:text-[1.25rem]"
-            >
+            <h3 className="md:text-[1.125rem] lg:text-[1.25rem]">
               info@selhono.com
             </h3>
           </div>
@@ -65,10 +62,7 @@ const Contact = () => {
               />
             </svg>
 
-            <h3
-              aria-label="selhono-phone"
-              className="md:text-[1.125rem] lg:text-[1.25rem]"
-            >
+            <h3 className="md:text-[1.125rem] lg:text-[1.25rem]">
               +1 (378) 400-1234
             </h3>
           </div>
@@ -95,10 +89,7 @@ const Contact = () => {
               />
             </svg>
 
-            <h3
-              aria-label="selhono-address"
-              className="md:text-[1.125rem] lg:text-[1.25rem]"
-            >
+            <h3 className="md:text-[1.125rem] lg:text-[1.25rem]">
               <a href="https://selhonointeriors.vercel.app">
                 www.selhonointeriors.vercel.app
               </a>
