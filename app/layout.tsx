@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Script from "next/script";
 import "./globals.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -38,25 +37,22 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const trackingId = process.env.NEXT_PUBLIC_GA_TRACKING_ID;
-
   return (
     <html lang="en">
       <head>
         {/* Google Analytics script */}
-        <Script
+        <script
           async
-          src={`https://www.googletagmanager.com/gtag/js?id=${trackingId}`}
-          strategy="afterInteractive"
+          src={`https://www.googletagmanager.com/gtag/js?id=G-CREKBEE0R3`}
         />
-        <Script id="google-analytics" strategy="afterInteractive">
+        <script>
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', '${trackingId}');
+            gtag('config', 'G-CREKBEE0R3');
           `}
-        </Script>
+        </script>
       </head>
       <body className="overflow-hidden">
         <FollowCursor />
