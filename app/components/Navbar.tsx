@@ -4,17 +4,12 @@ import Link from "next/link";
 import { jostFont } from "../util/font";
 import { motion } from "framer-motion";
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { FaBarsStaggered } from "react-icons/fa6";
 
 const Navbar = () => {
-  const [currentPage, setCurrentPage] = useState("");
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
-
-  useEffect(() => {
-    setCurrentPage(pathname);
-  }, [pathname]);
 
   const handleNav = () => {
     setOpen(!open);
@@ -54,7 +49,7 @@ const Navbar = () => {
           <Link href="/">
             <motion.h1
               className={`${
-                currentPage === "/" ? "text-[#C76904]" : "text-[#292F36]"
+                pathname === "/" ? "text-[#C76904]" : "text-[#292F36]"
               }`}
               whileHover={{
                 color: "#C76904",
@@ -66,7 +61,7 @@ const Navbar = () => {
           <Link href="/about">
             <motion.h1
               className={`${
-                currentPage === "/about" ? "text-[#C76904]" : "text-[#292F36]"
+                pathname === "/about" ? "text-[#C76904]" : "text-[#292F36]"
               }`}
               whileHover={{
                 color: "#C76904",
@@ -78,9 +73,7 @@ const Navbar = () => {
           <Link href="/services">
             <motion.h1
               className={`${
-                currentPage === "/services"
-                  ? "text-[#C76904]"
-                  : "text-[#292F36]"
+                pathname === "/services" ? "text-[#C76904]" : "text-[#292F36]"
               }`}
               whileHover={{
                 color: "#C76904",
@@ -95,7 +88,7 @@ const Navbar = () => {
                 color: "#C76904",
               }}
               className={`${
-                currentPage === "/project" ? "text-[#C76904]" : "text-[#292F36]"
+                pathname === "/project" ? "text-[#C76904]" : "text-[#292F36]"
               }`}
             >
               Project
@@ -107,7 +100,7 @@ const Navbar = () => {
                 color: "#C76904",
               }}
               className={`${
-                currentPage === "/blog" ? "text-[#C76904]" : "text-[#292F36]"
+                pathname === "/blog" ? "text-[#C76904]" : "text-[#292F36]"
               }`}
             >
               Blog
@@ -119,7 +112,7 @@ const Navbar = () => {
                 color: "#C76904",
               }}
               className={`${
-                currentPage === "/contact" ? "text-[#C76904]" : "text-[#292F36]"
+                pathname === "/contact" ? "text-[#C76904]" : "text-[#292F36]"
               }`}
             >
               Contact
@@ -131,7 +124,7 @@ const Navbar = () => {
                 color: "#C76904",
               }}
               className={`${
-                currentPage === "/team" ? "text-[#C76904]" : "text-[#292F36]"
+                pathname === "/team" ? "text-[#C76904]" : "text-[#292F36]"
               }`}
             >
               Team
@@ -185,7 +178,7 @@ const Navbar = () => {
               <Link href="/">
                 <motion.h1
                   className={`${
-                    currentPage === "/" ? "text-[#C76904]" : "text-[#292F36]"
+                    pathname === "/" ? "text-[#C76904]" : "text-[#292F36]"
                   }`}
                   whileHover={{
                     color: "#C76904",
@@ -199,9 +192,7 @@ const Navbar = () => {
               <Link href="/about">
                 <motion.h1
                   className={`${
-                    currentPage === "/about"
-                      ? "text-[#C76904]"
-                      : "text-[#292F36]"
+                    pathname === "/about" ? "text-[#C76904]" : "text-[#292F36]"
                   }`}
                   whileHover={{
                     color: "#C76904",
@@ -215,7 +206,7 @@ const Navbar = () => {
               <Link href="/services">
                 <motion.h1
                   className={`${
-                    currentPage === "/services"
+                    pathname === "/services"
                       ? "text-[#C76904]"
                       : "text-[#292F36]"
                   }`}
@@ -234,7 +225,7 @@ const Navbar = () => {
                     color: "#C76904",
                   }}
                   className={`${
-                    currentPage === "/project"
+                    pathname === "/project"
                       ? "text-[#C76904]"
                       : "text-[#292F36]"
                   }`}
@@ -250,9 +241,7 @@ const Navbar = () => {
                     color: "#C76904",
                   }}
                   className={`${
-                    currentPage === "/blog"
-                      ? "text-[#C76904]"
-                      : "text-[#292F36]"
+                    pathname === "/blog" ? "text-[#C76904]" : "text-[#292F36]"
                   }`}
                 >
                   Blog
@@ -266,7 +255,7 @@ const Navbar = () => {
                     color: "#C76904",
                   }}
                   className={`${
-                    currentPage === "/contact"
+                    pathname === "/contact"
                       ? "text-[#C76904]"
                       : "text-[#292F36]"
                   }`}
@@ -282,9 +271,7 @@ const Navbar = () => {
                     color: "#C76904",
                   }}
                   className={`${
-                    currentPage === "/team"
-                      ? "text-[#C76904]"
-                      : "text-[#292F36]"
+                    pathname === "/team" ? "text-[#C76904]" : "text-[#292F36]"
                   }`}
                 >
                   Team

@@ -46,6 +46,7 @@ const BlogArticle = () => {
                 fill
                 src={article.image}
                 alt={article.alt}
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 className="object-cover rounded-t-[20px]"
               />
             </div>

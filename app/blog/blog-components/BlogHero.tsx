@@ -10,6 +10,7 @@ const BlogHero = () => {
           alt="blog"
           fill
           priority
+          sizes="100vw"
           className="object-cover"
         />
       </div>

@@ -10,6 +10,7 @@ const TeamHero = () => {
           alt="team"
           fill
           priority
+          sizes="100vw"
           className="object-cover"
         />
       </div>

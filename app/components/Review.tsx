@@ -53,6 +53,7 @@ const Review = () => {
                 <div className="relative w-[4.813rem] h-[4.813rem]">
                   <Image
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     priority
                     className="object-cover rounded-full"
                     src={testimony.image}

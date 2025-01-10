@@ -10,6 +10,7 @@ const ServiceHero = () => {
           alt="services"
           fill
           priority
+          sizes="100vw"
           className="object-cover"
         />
       </div>

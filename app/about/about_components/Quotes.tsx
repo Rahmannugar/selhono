@@ -43,6 +43,7 @@ const Quotes = () => {
               src="https://res.cloudinary.com/thirtythree/image/upload/q_auto,f_auto/v1736507972/quotes-1_qm8akh.jpg"
               alt="quotes-1"
               fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               className="object-cover rounded-tl-[6.25rem]"
             />
           </div>
@@ -54,6 +55,7 @@ const Quotes = () => {
               src="https://res.cloudinary.com/thirtythree/image/upload/q_auto,f_auto/v1736507974/quotes-2_wahqd3.jpg"
               alt="quotes-2"
               fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               className="object-cover rounded-tr-[6.25rem]"
             />
           </div>

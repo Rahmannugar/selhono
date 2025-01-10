@@ -9,12 +9,12 @@ const Work = () => {
       body: "There are many variations of the passages of lorem Ipsum from available, majority.",
     },
     {
-      id: 0,
+      id: 1,
       title: "Interior Work",
       body: "There are many variations of the passages of lorem Ipsum from available, majority.",
     },
     {
-      id: 0,
+      id: 2,
       title: "Realization",
       body: "There are many variations of the passages of lorem Ipsum from available, majority.",
     },

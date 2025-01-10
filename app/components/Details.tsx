@@ -11,6 +11,7 @@ const Details = () => {
             src="https://res.cloudinary.com/thirtythree/image/upload/q_auto,f_auto/v1736506881/details-1_yw687b.png"
             alt="detail-1"
             fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             className="object-fill"
           />
         </div>
@@ -71,6 +72,7 @@ const Details = () => {
           src="https://res.cloudinary.com/thirtythree/image/upload/q_auto,f_auto/v1736506884/details-2_l80d4f.png"
           alt="detail-2"
           fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           className="object-fill"
         />
       </div>

@@ -10,6 +10,7 @@ const Advert = () => {
           src="https://res.cloudinary.com/thirtythree/image/upload/q_auto,f_auto/v1736506784/advert_i9axy3.png"
           alt="advert"
           fill
+          sizes="100vw"
           className="object-cover"
         />
       </div>

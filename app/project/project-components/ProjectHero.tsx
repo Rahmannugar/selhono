@@ -4,15 +4,16 @@ import Image from "next/image";
 const ProjectHero = () => {
   return (
     <section className="relative">
-      <div className="relative w-full h-[22.25rem]">
+      {/* <div className="relative w-full h-[22.25rem]">
         <Image
           src="/images/project.jpg"
           alt="project"
           fill
           priority
+           sizes="100vw"
           className="object-cover"
         />
-      </div>
+      </div> */}
       <div className="absolute inset-0 bg-black bg-opacity-20"></div>
       <div className="absolute inset-0 z-10 items-center flex justify-center">
         <h1

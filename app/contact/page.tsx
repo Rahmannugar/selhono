@@ -24,6 +24,7 @@ const page = async () => {
             alt="contact"
             fill
             priority
+            sizes="100vw"
             className="object-cover"
           />
         </div>

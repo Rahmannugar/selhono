@@ -39,6 +39,7 @@ const BlogPost = () => {
               alt="blog-post"
               fill
               priority
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               className="rounded-[1.875rem] object-cover"
             />
           </div>

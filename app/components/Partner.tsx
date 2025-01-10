@@ -10,6 +10,7 @@ const Partner = () => {
             alt="buffer"
             fill
             priority
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             className="object-cover"
           />
         </div>
@@ -20,6 +21,7 @@ const Partner = () => {
             alt="big-commerce"
             fill
             priority
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             className="object-cover"
           />
         </div>
@@ -30,6 +32,7 @@ const Partner = () => {
             alt="uon"
             fill
             priority
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             className="object-cover"
           />
         </div>
@@ -40,6 +43,7 @@ const Partner = () => {
             alt="fourth"
             fill
             priority
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             className="object-cover"
           />
         </div>

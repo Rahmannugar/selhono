@@ -31,7 +31,7 @@ const TeamSection = () => {
     {
       id: 5,
       name: "Avery Jackson",
-      url: "/https://res.cloudinary.com/thirtythree/image/upload/q_auto,f_auto/v1736508490/team-6_auymoq.png",
+      url: "https://res.cloudinary.com/thirtythree/image/upload/q_auto,f_auto/v1736508490/team-6_auymoq.png",
     },
     {
       id: 6,

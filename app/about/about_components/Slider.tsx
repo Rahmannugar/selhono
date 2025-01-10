@@ -89,6 +89,7 @@ const Slider = () => {
           <Image
             className="object-cover"
             fill
+            sizes="100vw"
             priority={true}
             key={currentIndex}
             alt={sliderImages[currentIndex].name}
@@ -114,6 +115,7 @@ const Slider = () => {
               alt={image.name}
               priority={true}
               fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               className="object-cover"
             />
           </div>

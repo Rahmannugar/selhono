@@ -10,6 +10,7 @@ const Hero = () => {
           src="https://res.cloudinary.com/thirtythree/image/upload/q_auto,f_auto/v1736506886/hero_zn4f1v.png"
           alt="hero-image"
           fill
+          sizes="100vw"
           priority
           className="object-cover rounded-tl-[5rem] rounded-br-[5rem]"
         />

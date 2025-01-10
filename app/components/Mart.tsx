@@ -48,7 +48,13 @@ const Mart = () => {
         {martItems.map((martItem) => (
           <div className="space-y-3" key={martItem.id}>
             <div className="relative w-full min-w-[15.625rem] h-[22.5rem] sm:h-[18.75rem] md:h-[23.75rem] md:min-w-[20rem] lg:w-[28rem] lg:h-[26.25rem] xl:w-[34.188rem] xl:h-[34.25rem]">
-              <Image src={martItem.image} alt={martItem.name} fill priority />
+              <Image
+                src={martItem.image}
+                alt={martItem.name}
+                fill
+                priority
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              />
             </div>
 
             <div className="flex justify-between md:min-w-[20rem] lg:w-[28rem] xl:w-[34.188rem]">
