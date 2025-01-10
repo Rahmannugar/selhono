@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    creator: "@nugarRahman",
+    creator: "@NugarRahman",
   },
   openGraph: {
     type: "website",
