@@ -13,6 +13,12 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
   },
+  keywords: [
+    "selhono",
+    "interior designs",
+    "bathroom designs",
+    "bedroom designs",
+  ],
 };
 
 export default function RootLayout({
