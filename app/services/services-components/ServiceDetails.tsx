@@ -35,7 +35,7 @@ const ServiceDetails = () => {
           key={service.id}
           className="max-w-[22.375rem] mx-auto py-10 w-full flex flex-col justify-center text-center items-center hover:text-[#C76904] hover:bg-[#F9F9F9] rounded-[1.875rem] ease-in transition-all duration-300"
         >
-          <Link href="/services">
+          <Link href="/services" aria-label="services">
             <h2
               className={`${dmSerifFont.className} text-[1.25rem] lg:text-[1.563rem]`}
             >

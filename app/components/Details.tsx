@@ -56,7 +56,7 @@ const Details = () => {
             </div>
           </div>
 
-          <Link href="/contact">
+          <Link href="/contact" aria-label="contact">
             <button
               className={`${interFont.className} bg-[#CDA274] hover:bg-[#7a552e] mt-7 sm:mt-10 lg:mt-14 duration-200 font-medium ease-in rounded-[1.125rem] text-white flex items-center justify-center space-x-3 py-4 lg:py-6 px-5 text-sm md:text-lg`}
             >

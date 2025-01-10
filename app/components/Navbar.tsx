@@ -24,7 +24,7 @@ const Navbar = () => {
     <header className="relative pb-[4.5rem] md:pb-0 z-50">
       <div className="flex backdrop-blur-md fixed md:relative w-full bg-white/30 border-b-2 md:border-none justify-between 2xl:justify-center xl:space-x-10 2xl:space-x-72 items-center lg:px-16 xl:px-28 px-7 sm:px-10 py-6 md:py-14">
         <div>
-          <Link href="/">
+          <Link href="/" aria-label="selhono">
             <svg
               aria-label="Homepage"
               className="lg:w-[14.1875rem] w-[6rem]"
@@ -160,6 +160,7 @@ const Navbar = () => {
 
         {/* mobile navtools */}
         <motion.button
+          aria-label="nav-btn"
           aria-controls="mobile-navigation"
           onClick={handleNav}
           className="md:hidden"

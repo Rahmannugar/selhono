@@ -100,14 +100,14 @@ const Contact = () => {
               className="md:text-[1.125rem] lg:text-[1.25rem]"
             >
               <a href="https://selhonointeriors.vercel.app">
-                www.selhonointeriors.com
+                www.selhonointeriors.vercel.app
               </a>
             </h3>
           </div>
 
           <div className="flex items-center space-x-5 pt-4 px-4">
             {/* facebook */}
-            <Link href="/">
+            <Link href="/" aria-label="Facebook">
               <svg
                 width="10"
                 height="19"
@@ -123,7 +123,7 @@ const Contact = () => {
             </Link>
 
             {/* twitter */}
-            <Link href="/">
+            <Link href="/" aria-label="Twitter">
               <svg
                 width="18"
                 height="16"
@@ -139,7 +139,7 @@ const Contact = () => {
             </Link>
 
             {/* linkedin */}
-            <Link href="/">
+            <Link href="/" aria-label="LinkedIn">
               <svg
                 width="16"
                 height="17"
@@ -155,7 +155,7 @@ const Contact = () => {
             </Link>
 
             {/* instagram */}
-            <Link href="/">
+            <Link href="/" aria-label="Instagram">
               <svg
                 width="17"
                 height="18"

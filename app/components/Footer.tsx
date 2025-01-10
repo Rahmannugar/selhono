@@ -27,7 +27,7 @@ const Footer = () => {
     <footer className="max-w-[75.625rem] space-y-16 md:space-y-20 mx-auto lg:space-y-28 mt-20 md:mt-10 mb-4 xl:px-20 px-5 lg:px-16 sm:px-10">
       {/* < md screens */}
       <div className="mt-10 md:hidden block">
-        <Link href="/">
+        <Link href="/" aria-label="Selhono">
           <svg
             className="w-[9rem]"
             width="227"
@@ -55,7 +55,7 @@ const Footer = () => {
 
         <div className="flex items-center space-x-7 mt-7">
           {/* facebook */}
-          <Link href="/">
+          <Link href="/" aria-label="Facebook">
             <svg
               width="10"
               height="19"
@@ -71,7 +71,7 @@ const Footer = () => {
           </Link>
 
           {/* twitter */}
-          <Link href="/">
+          <Link href="/" aria-label="Twitter">
             <svg
               width="18"
               height="16"
@@ -86,8 +86,8 @@ const Footer = () => {
             </svg>
           </Link>
 
-          {/* linkedin */}
-          <Link href="/">
+          {/* linkedIn */}
+          <Link href="/" aria-label="LinkedIn">
             <svg
               width="16"
               height="17"
