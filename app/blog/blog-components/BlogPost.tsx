@@ -33,17 +33,17 @@ const BlogPost = () => {
           Latest Post
         </h1>
         <div className="mt-5 sm:flex space-y-7 sm:space-x-10 xl:space-x-16 sm:space-y-0">
-          <div className="relative h-[350px] md:h-[400px] w-full max-w-[649px] xl:w-[649px]">
+          <div className="relative h-[21.875rem] md:h-[25rem] w-full max-w-[40.563rem] xl:w-[40.563rem]">
             <Image
               src="/images/blogpost.jpg"
               alt="blog-post"
               fill
               priority
-              className="rounded-[30px] object-cover"
+              className="rounded-[1.875rem] object-cover"
             />
           </div>
 
-          <div className="sm:max-w-[463px] w-full">
+          <div className="sm:max-w-[28.93rem] w-full">
             <h2
               className={`${dmSerifFont.className} text-[1.125rem] sm:text-[1.25rem] text-[#292F36] lg:text-[1.563rem]`}
             >
