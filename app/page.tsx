@@ -49,6 +49,27 @@ const page = () => {
           type="image/jpeg"
           crossOrigin="anonymous"
         />
+        <link
+          rel="preload"
+          href="https://res.cloudinary.com/thirtythree/image/upload/q_auto,f_auto/v1736507578/news-1_jhzplz.png"
+          as="image"
+          type="image/png"
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="preload"
+          href="https://res.cloudinary.com/thirtythree/image/upload/q_auto,f_auto/v1736507969/news-2_u6uyag.png"
+          as="image"
+          type="image/png"
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="preload"
+          href="https://res.cloudinary.com/thirtythree/image/upload/q_auto,f_auto/v1736507970/news-3_qtwl9r.png"
+          as="image"
+          type="image/png"
+          crossOrigin="anonymous"
+        />
       </Head>
       <main>
         <Slider />
