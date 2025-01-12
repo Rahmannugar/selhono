@@ -1,138 +1,88 @@
-"use client";
-
+import { memo } from "react";
 import Image from "next/image";
+import { dmSerifFont, jostFont } from "@/app/util/font";
+import { categoryImages, CATEGORIES } from "./projectImages";
 
 interface Props {
   currentIndex: number;
 }
 
-const ProjectCategory = ({ currentIndex }: Props) => {
-  const bathroomImages = [
-    {
-      id: 0,
-      url: "https://res.cloudinary.com/thirtythree/image/upload/q_auto,f_auto/v1736700760/bathroom-1_lxrmg0.jpg",
-    },
-    {
-      id: 1,
-      url: "https://res.cloudinary.com/thirtythree/image/upload/q_auto,f_auto/v1736700759/bathroom-2_q2o6ae.jpg",
-    },
-    {
-      id: 2,
-      url: "https://res.cloudinary.com/thirtythree/image/upload/q_auto,f_auto/v1736700764/bathroom-3_wcjvkw.jpg",
-    },
-    {
-      id: 3,
-      url: "https://res.cloudinary.com/thirtythree/image/upload/q_auto,f_auto/v1736700758/bathroom-4_cgz28l.jpg",
-    },
-    {
-      id: 4,
-      url: "https://res.cloudinary.com/thirtythree/image/upload/q_auto,f_auto/v1736700762/bathroom-5_zqt2u5.jpg",
-    },
-    {
-      id: 5,
-      url: "https://res.cloudinary.com/thirtythree/image/upload/q_auto,f_auto/v1736700756/bathroom-6_ovbsmo.jpg",
-    },
-  ];
+const ProjectCategory = memo(({ currentIndex }: Props) => {
+  const getCategoryData = () => {
+    switch (currentIndex) {
+      case CATEGORIES.BATHROOM:
+        return { images: categoryImages.bathroom, title: "Bathroom" };
+      case CATEGORIES.BEDROOM:
+        return { images: categoryImages.bedroom, title: "Bedroom" };
+      case CATEGORIES.KITCHEN:
+        return { images: categoryImages.kitchen, title: "Kitchen" };
+      case CATEGORIES.LIVING_AREA:
+        return { images: categoryImages.livingArea, title: "Living Area" };
+      default:
+        return { images: categoryImages.bedroom, title: "Bedroom" };
+    }
+  };
 
-  const bedroomImages = [
-    {
-      id: 0,
-      url: "https://res.cloudinary.com/thirtythree/image/upload/q_auto,f_auto/v1736700766/bedroom-1_c0gf5o.jpg",
-    },
-    {
-      id: 1,
-      url: "https://res.cloudinary.com/thirtythree/image/upload/q_auto,f_auto/v1736700769/bedroom-2_gzolu4.jpg",
-    },
-    {
-      id: 2,
-      url: "https://res.cloudinary.com/thirtythree/image/upload/q_auto,f_auto/v1736700765/bedroom-3_sccbyy.jpg",
-    },
-    {
-      id: 3,
-      url: "https://res.cloudinary.com/thirtythree/image/upload/q_auto,f_auto/v1736700762/bedroom-4_egjayd.jpg",
-    },
-    {
-      id: 4,
-      url: "https://res.cloudinary.com/thirtythree/image/upload/q_auto,f_auto/v1736700763/bedroom-5_yln8ir.jpg",
-    },
-    {
-      id: 5,
-      url: "https://res.cloudinary.com/thirtythree/image/upload/q_auto,f_auto/v1736700762/bedroom-6_fjwndw.jpg",
-    },
-  ];
+  const { images, title } = getCategoryData();
 
-  const kitchenImages = [
-    {
-      id: 0,
-      url: "https://res.cloudinary.com/thirtythree/image/upload/q_auto,f_auto/v1736700757/kitchen-1_dmztmk.jpg",
-    },
-    {
-      id: 1,
-      url: "https://res.cloudinary.com/thirtythree/image/upload/q_auto,f_auto/v1736700753/kitchen-2_ddv5hk.jpg",
-    },
-    {
-      id: 2,
-      url: "https://res.cloudinary.com/thirtythree/image/upload/q_auto,f_auto/v1736700751/kitchen-3_o3vasc.jpg",
-    },
-    {
-      id: 3,
-      url: "https://res.cloudinary.com/thirtythree/image/upload/q_auto,f_auto/v1736700756/kitchen-4_yzu5jz.jpg",
-    },
-    {
-      id: 4,
-      url: "https://res.cloudinary.com/thirtythree/image/upload/q_auto,f_auto/v1736700753/kitchen-5_opjfaw.jpg",
-    },
-    {
-      id: 5,
-      url: "https://res.cloudinary.com/thirtythree/image/upload/q_auto,f_auto/v1736700750/kitchen-6_mdsmya.jpg",
-    },
-  ];
-
-  const livngAreaImages = [
-    {
-      id: 0,
-      url: "https://res.cloudinary.com/thirtythree/image/upload/q_auto,f_auto/v1736700756/living-area-1_rrorih.jpg",
-    },
-    {
-      id: 1,
-      url: "https://res.cloudinary.com/thirtythree/image/upload/q_auto,f_auto/v1736700752/living-area-2_juptsl.jpg",
-    },
-    {
-      id: 2,
-      url: "https://res.cloudinary.com/thirtythree/image/upload/q_auto,f_auto/v1736700752/living-area-3_upsmne.jpg",
-    },
-    {
-      id: 3,
-      url: "https://res.cloudinary.com/thirtythree/image/upload/q_auto,f_auto/v1736700747/living-area-4_m5n4np.jpg",
-    },
-    {
-      id: 4,
-      url: "https://res.cloudinary.com/thirtythree/image/upload/q_auto,f_auto/v1736700753/living-area-5_fgixqs.jpg",
-    },
-    {
-      id: 5,
-      url: "https://res.cloudinary.com/thirtythree/image/upload/q_auto,f_auto/v1736700749/living-area-6_aoywe8.jpg",
-    },
-  ];
-  if (currentIndex === 1)
-    return (
-      <section className="grid sm:grid-cols-2 gap-10 lg:gap-12">
-        {bathroomImages.map((bathroomImage) => (
-          <div key={bathroomImage.id}>
-            <div className="relative xl:h-[700px] lg:h-[550px] md:h-[450px] h-[400px] w-full max-w-[580px] xl:w-[580px]">
-              <Image
-                src={bathroomImage.url}
-                alt="bathroom Images"
-                fill
-                className="object-cover"
-              />
+  return (
+    <section className="grid sm:grid-cols-2 gap-16 sm:gap-10 xl:gap-12 mb-16">
+      {images.map((image, index) => (
+        <div
+          key={image.id}
+          className={`
+            transform transition-all duration-500 ease-in-out
+            opacity-0 translate-y-4
+            animate-[fadeIn_0.3s_ease-in-out_forwards]
+            [animation-delay:${index * 100}ms]
+          `}
+        >
+          <div className="relative xl:h-[43.75rem] lg:h-[34.375rem] md:h-[28.125rem] h-[25rem] w-full max-w-[36.25rem] 2xl:w-[36.25rem]">
+            <Image
+              src={image.url}
+              alt={`${title} Images`}
+              fill
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+              className="object-cover transition-transform duration-300 ease-in-out transform hover:scale-105"
+              priority={image.id < 2}
+              loading={image.id < 2 ? "eager" : "lazy"}
+            />
+          </div>
+          <div className="flex justify-between items-center w-full mt-6">
+            <div>
+              <h2
+                className={`${dmSerifFont.className} text-[#292F36] text-[1.125rem] md:text-[1.375rem] lg:text-[1.563rem] transition-all duration-300 ease-in-out`}
+              >
+                Minimal {title}
+              </h2>
+              <h3
+                className={`${jostFont.className} text-[#4D5053] md:text-[1.125rem] lg:text-[1.375rem] transition-all duration-300 ease-in-out`}
+              >
+                Decor / Architecture
+              </h3>
+            </div>
+            <div className="flex justify-center cursor-pointer items-center w-[2.5rem] h-[2.5rem] lg:w-[2.813rem] lg:h-[2.813rem] xl:w-[3.25rem] xl:h-[3.25rem] bg-[#F4F0EC] transition-all duration-300 ease-in-out hover:bg-[#CDA274] rounded-full group">
+              <svg
+                width="9"
+                height="16"
+                viewBox="0 0 9 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                className="transition-transform duration-300 ease-in-out group-hover:translate-x-1"
+              >
+                <path
+                  d="M1.77199 14.6855L7.71484 7.99983L1.77199 1.31412"
+                  stroke="#292F36"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
             </div>
           </div>
-        ))}
-      </section>
-    );
-  if (currentIndex === 2) return <section>1</section>;
-  if (currentIndex === 3) return <section>1</section>;
-  if (currentIndex === 4) return <section>1</section>;
-};
+        </div>
+      ))}
+    </section>
+  );
+});
 export default ProjectCategory;

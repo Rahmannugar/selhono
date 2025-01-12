@@ -1,64 +1,72 @@
 "use client";
 
 import { jostFont } from "@/app/util/font";
-import { useState } from "react";
+import { useState, useCallback } from "react";
 import ProjectCategory from "./ProjectCategory";
+import { CATEGORIES } from "./projectImages";
 
 const ProjectTab = () => {
-  const [currentIndex, setCurrentIndex] = useState(2);
+  const [currentIndex, setCurrentIndex] = useState<number>(CATEGORIES.BEDROOM);
+  const [isTransitioning, setIsTransitioning] = useState(false);
+
+  const handleCategoryChange = useCallback(
+    (index: number) => {
+      if (currentIndex === index) return;
+
+      setIsTransitioning(true);
+      setCurrentIndex(index);
+
+      setTimeout(() => {
+        setIsTransitioning(false);
+      }, 500);
+    },
+    [currentIndex]
+  );
+
+  const categories = [
+    { id: CATEGORIES.BATHROOM, label: "Bathroom" },
+    { id: CATEGORIES.BEDROOM, label: "Bedroom" },
+    { id: CATEGORIES.KITCHEN, label: "Kitchen" },
+    { id: CATEGORIES.LIVING_AREA, label: "Living Area" },
+  ];
+
   return (
     <section className="mt-10 space-y-10">
-      <div
-        className={`${jostFont.className} bg-white w-full mx-auto text-[14px] sm:text-[16px] lg:text-[18px] font-semibold text-[#292F36] border border-[#CDA274] flex justify-between items-center max-w-[880px] 2xl:w-[880px] rounded-[18px] h-[75px]`}
+      <nav
+        className={`${jostFont.className} bg-white w-full mx-auto text-[0.875rem] sm:text-[1rem] lg:text-[1.125rem] font-semibold text-[#292F36] border border-[#CDA274] flex justify-between items-center max-w-[55rem] 2xl:w-[55rem] rounded-[1.125rem] h-[4.685rem] overflow-hidden`}
       >
-        {/* Bathroom */}
-        <button
-          onClick={() => {
-            setCurrentIndex(1);
-          }}
-          className={`cursor-pointer ${
-            currentIndex === 1 ? "bg-[#CDA274] text-white" : ""
-          } hover:bg-[#CDA274] hover:text-white h-full my-auto rounded-[18px]`}
-        >
-          <h2>Bathroom</h2>
-        </button>
-        {/* Bedroom*/}
-        <button
-          onClick={() => {
-            setCurrentIndex(2);
-          }}
-          className={`cursor-pointer ${
-            currentIndex === 2 ? "bg-[#CDA274] text-white" : ""
-          } hover:bg-[#CDA274] hover:text-white h-full my-auto rounded-[18px]`}
-        >
-          <h2>Bedroom</h2>
-        </button>
-        {/* Kitchen */}
-        <button
-          onClick={() => {
-            setCurrentIndex(3);
-          }}
-          className={`cursor-pointer ${
-            currentIndex === 3 ? "bg-[#CDA274] text-white" : ""
-          } hover:bg-[#CDA274] hover:text-white h-full my-auto rounded-[18px]`}
-        >
-          <h2>Kitchen</h2>
-        </button>
-        {/* Living Area */}
-        <button
-          onClick={() => {
-            setCurrentIndex(4);
-          }}
-          className={`cursor-pointer ${
-            currentIndex === 4 ? "bg-[#CDA274] text-white" : ""
-          } hover:bg-[#CDA274] hover:text-white h-full my-auto rounded-[18px]`}
-        >
-          <h2>Living Area</h2>
-        </button>
-      </div>
+        {categories.map(({ id, label }) => (
+          <button
+            key={id}
+            onClick={() => handleCategoryChange(id)}
+            className={`
+              relative cursor-pointer w-full h-full rounded-[1.125rem]
+              transition-all duration-300 ease-in-out
+              hover:bg-[#CDA274] hover:text-white
+              ${currentIndex === id ? "bg-[#CDA274] text-white" : ""}
+            `}
+          >
+            <h2 className="relative z-10 transition-transform duration-300 ease-in-out transform hover:scale-105">
+              {label}
+            </h2>
+          </button>
+        ))}
+      </nav>
 
-      <ProjectCategory currentIndex={currentIndex} />
+      <div
+        className={`
+        transform transition-all duration-300 ease-in-out
+        ${
+          isTransitioning
+            ? "opacity-0 translate-y-4"
+            : "opacity-100 translate-y-0"
+        }
+      `}
+      >
+        <ProjectCategory currentIndex={currentIndex} />
+      </div>
     </section>
   );
 };
+
 export default ProjectTab;
