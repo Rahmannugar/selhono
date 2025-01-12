@@ -33,7 +33,7 @@ const ProjectTab = () => {
   return (
     <section className="mt-10 space-y-10">
       <nav
-        className={`${jostFont.className} bg-white w-full mx-auto text-[0.875rem] sm:text-[1rem] lg:text-[1.125rem] font-semibold text-[#292F36] border border-[#CDA274] flex justify-between items-center max-w-[55rem] 2xl:w-[55rem] rounded-[1.125rem] h-[4.685rem] overflow-hidden`}
+        className={`${jostFont.className} bg-white w-full mx-auto text-[0.875rem] sm:text-[1rem] lg:text-[1.125rem] font-semibold text-[#292F36] border border-[#CDA274] flex justify-between items-center max-w-[55rem] 2xl:w-[55rem] rounded-[1.125rem] h-[3.75rem] md:h-[4.063rem] lg:h-[4.685rem] overflow-hidden`}
       >
         {categories.map(({ id, label }) => (
           <button

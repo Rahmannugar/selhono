@@ -85,4 +85,5 @@ const ProjectCategory = memo(({ currentIndex }: Props) => {
     </section>
   );
 });
+ProjectCategory.displayName = "ProjectCategory";
 export default ProjectCategory;
