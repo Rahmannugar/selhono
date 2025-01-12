@@ -1,6 +1,7 @@
 import Head from "next/head";
 import ProjectHero from "./project-components/ProjectHero";
 import ProjectTab from "./project-components/ProjectTab";
+import ImagePreloader from "./project-components/ImagePreloader";
 
 const page = () => {
   return (
@@ -14,6 +15,7 @@ const page = () => {
           crossOrigin="anonymous"
         />
       </Head>
+      <ImagePreloader />
       <main>
         <ProjectHero />
         <div className="xl:px-20 px-5 lg:px-16 2xl:flex 2xl:flex-col 2xl:justify-center 2xl:items-center sm:px-10">

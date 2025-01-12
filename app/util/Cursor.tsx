@@ -1,4 +1,5 @@
 "use client";
+
 import React, { useEffect, useRef } from "react";
 
 interface Point {
@@ -46,7 +47,7 @@ const FollowCursor: React.FC<FollowCursorProps> = ({
   dotSize = 14,
   lag = 8,
 }) => {
-  const cursor = useRef<Point | null>(null);
+  const cursor = useRef<Point>({ x: 0, y: 0 });
   const lastMoveTime = useRef(0);
   const animationFrame = useRef(0);
   const dot = useRef<Dot | null>(null);
@@ -54,7 +55,11 @@ const FollowCursor: React.FC<FollowCursorProps> = ({
   const context = useRef<CanvasRenderingContext2D | null>(null);
 
   useEffect(() => {
-    if (typeof window === "undefined") return;
+    if (typeof window === "undefined") return; // Ensure this runs only on the client
+
+    const prefersReducedMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)"
+    );
 
     const width = window.innerWidth;
     const height = window.innerHeight;
@@ -80,9 +85,25 @@ const FollowCursor: React.FC<FollowCursorProps> = ({
     const onPointerMove = (e: PointerEvent) => {
       const now = Date.now();
       if (now - lastMoveTime.current > 16) {
-        cursor.current = { x: e.clientX, y: e.clientY };
+        cursor.current.x = e.clientX;
+        cursor.current.y = e.clientY;
         dot.current?.jumpTo(cursor.current.x, cursor.current.y);
         lastMoveTime.current = now;
+      }
+    };
+
+    const onTouchStart = (e: TouchEvent) => {
+      if (e.touches.length > 0) {
+        cursor.current.x = e.touches[0].clientX;
+        cursor.current.y = e.touches[0].clientY;
+        dot.current?.jumpTo(cursor.current.x, cursor.current.y);
+      }
+    };
+
+    const onTouchMove = (e: TouchEvent) => {
+      if (e.touches.length > 0) {
+        cursor.current.x = e.touches[0].clientX;
+        cursor.current.y = e.touches[0].clientY;
       }
     };
 
@@ -96,7 +117,7 @@ const FollowCursor: React.FC<FollowCursorProps> = ({
     };
 
     const updateDot = () => {
-      if (context.current && dot.current && cursor.current) {
+      if (context.current && dot.current) {
         context.current.clearRect(0, 0, window.innerWidth, window.innerHeight);
         dot.current.moveTowards(
           cursor.current.x,
@@ -111,16 +132,30 @@ const FollowCursor: React.FC<FollowCursorProps> = ({
       animationFrame.current = requestAnimationFrame(loop);
     };
 
-    window.addEventListener("pointermove", onPointerMove);
-    window.addEventListener("resize", onWindowResize);
+    const init = () => {
+      if (prefersReducedMotion.matches) {
+        console.log("Reduced motion enabled, cursor effect skipped.");
+        return;
+      }
 
-    loop();
+      window.addEventListener("pointermove", onPointerMove);
+      window.addEventListener("touchstart", onTouchStart);
+      window.addEventListener("touchmove", onTouchMove);
+      window.addEventListener("resize", onWindowResize);
 
-    return () => {
+      loop();
+    };
+
+    const destroy = () => {
       cancelAnimationFrame(animationFrame.current);
       window.removeEventListener("pointermove", onPointerMove);
+      window.removeEventListener("touchstart", onTouchStart);
+      window.removeEventListener("touchmove", onTouchMove);
       window.removeEventListener("resize", onWindowResize);
     };
+
+    init();
+    return () => destroy();
   }, [color, dotSize, lag]);
 
   return null;
