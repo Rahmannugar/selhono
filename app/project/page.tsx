@@ -1,5 +1,6 @@
 import Head from "next/head";
 import ProjectHero from "./project-components/ProjectHero";
+import ProjectTab from "./project-components/ProjectTab";
 
 const page = () => {
   return (
@@ -15,7 +16,9 @@ const page = () => {
       </Head>
       <main>
         <ProjectHero />
-        <div className="xl:px-20 px-5 lg:px-16 xl:flex xl:flex-col xl:justify-center xl:items-center sm:px-10"></div>
+        <div className="xl:px-20 px-5 lg:px-16 xl:flex xl:flex-col xl:justify-center xl:items-center sm:px-10">
+          <ProjectTab />
+        </div>
       </main>
     </>
   );

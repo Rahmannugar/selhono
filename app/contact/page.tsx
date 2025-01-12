@@ -11,7 +11,7 @@ const page = async () => {
       <Head>
         <link
           rel="preload"
-          href="https://res.cloudinary.com/thirtythree/image/upload/v1736506878/contact_htrk6v.jpg"
+          href="https://res.cloudinary.com/thirtythree/image/upload/q_auto,f_auto/v1736506878/contact_htrk6v.jpg"
           as="image"
           type="image/jpeg"
           crossOrigin="anonymous"
@@ -20,7 +20,7 @@ const page = async () => {
       <main>
         <div className="relative w-full h-[22.25rem]">
           <Image
-            src="https://res.cloudinary.com/thirtythree/image/upload/v1736506878/contact_htrk6v.jpg"
+            src="https://res.cloudinary.com/thirtythree/image/upload/q_auto,f_auto/v1736506878/contact_htrk6v.jpg"
             alt="contact"
             fill
             priority
