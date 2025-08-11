@@ -9,8 +9,6 @@ import Partner from "./components/Partner";
 import Review from "./components/Review";
 import Work from "./components/Work";
 
-export const dynamic = "force-static";
-
 const page = () => {
   return (
     <main>
