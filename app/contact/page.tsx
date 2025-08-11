@@ -1,18 +1,8 @@
 import Image from "next/image";
 import Contact from "./contact-components/Contact";
-import dynamic from "next/dynamic";
+import DynamicMapWrapper from "./contact-components/DynamicMapWrapper";
 import { getMapData } from "../lib/mapData";
 import { Metadata } from "next";
-
-// Optimize Map component loading
-const DynamicMap = dynamic(() => import("./contact-components/Map"), {
-  ssr: false,
-  loading: () => (
-    <div className="w-full h-[25rem] bg-[#f0f0f0] rounded-2xl flex items-center justify-center">
-      <p className="text-[#4D5053] text-lg">Loading map...</p>
-    </div>
-  ),
-});
 
 const ContactPage = async () => {
   const mapData = await getMapData();
@@ -34,7 +24,7 @@ const ContactPage = async () => {
       <div className="xl:px-20 px-5 lg:px-16 2xl:flex 2xl:flex-col 2xl:justify-center 2xl:items-center sm:px-10">
         <Contact />
         <div className="mt-20 mb-10 w-full">
-          <DynamicMap center={mapData.center} />
+          <DynamicMapWrapper center={mapData.center} />
         </div>
       </div>
     </main>
@@ -43,9 +33,7 @@ const ContactPage = async () => {
 
 export default ContactPage;
 
-export const generateMetadata = () => {
-  return {
-    title: "Contact",
-    description: "Selhono Interior Designs contact page",
-  };
+export const metadata: Metadata = {
+  title: "Contact",
+  description: "Selhono Interior Designs contact page",
 };
