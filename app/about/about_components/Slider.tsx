@@ -6,30 +6,30 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 
-const Slider = () => {
-  const sliderImages = [
-    {
-      name: "about-1",
-      url: "https://res.cloudinary.com/thirtythree/image/upload/q_auto,f_auto/v1736506766/about-1_iqiiyj.jpg",
-    },
-    {
-      name: "about-2",
-      url: "https://res.cloudinary.com/thirtythree/image/upload/q_auto,f_auto/v1736506768/about-2_i5htrn.jpg",
-    },
-    {
-      name: "about-3",
-      url: "https://res.cloudinary.com/thirtythree/image/upload/q_auto,f_auto/v1736506770/about-3_pw26qw.jpg",
-    },
-    {
-      name: "about-4",
-      url: "https://res.cloudinary.com/thirtythree/image/upload/q_auto,f_auto/v1736506774/about-4_ikdrb8.jpg",
-    },
-    {
-      name: "about-5",
-      url: "https://res.cloudinary.com/thirtythree/image/upload/q_auto,f_auto/v1736506775/about-5_y5mwbp.jpg",
-    },
-  ];
+const images = [
+  {
+    src: "https://res.cloudinary.com/thirtythree/image/upload/q_auto,f_auto/v1736506766/about-1_iqiiyj.jpg",
+    alt: "About 1",
+  },
+  {
+    src: "https://res.cloudinary.com/thirtythree/image/upload/q_auto,f_auto/v1736506768/about-2_i5htrn.jpg",
+    alt: "About 2",
+  },
+  {
+    src: "https://res.cloudinary.com/thirtythree/image/upload/q_auto,f_auto/v1736506770/about-3_pw26qw.jpg",
+    alt: "About 3",
+  },
+  {
+    src: "https://res.cloudinary.com/thirtythree/image/upload/q_auto,f_auto/v1736506774/about-4_ikdrb8.jpg",
+    alt: "About 4",
+  },
+  {
+    src: "https://res.cloudinary.com/thirtythree/image/upload/q_auto,f_auto/v1736506775/about-5_y5mwbp.jpg",
+    alt: "About 5",
+  },
+];
 
+const Slider = () => {
   const [currentIndex, setCurrentIndex] = useState(2);
   const [direction, setDirection] = useState(0);
 
@@ -38,13 +38,13 @@ const Slider = () => {
   const handleNext = () => {
     setDirection(1);
     setCurrentIndex((prevIndex) =>
-      prevIndex + 1 === sliderImages.length ? 0 : prevIndex + 1
+      prevIndex + 1 === images.length ? 0 : prevIndex + 1
     );
   };
   const handlePrevious = () => {
     setDirection(-1);
     setCurrentIndex((prevIndex) =>
-      prevIndex - 1 < 0 ? sliderImages.length - 1 : prevIndex - 1
+      prevIndex - 1 < 0 ? images.length - 1 : prevIndex - 1
     );
   };
   const handleDotClick = (index: number) => {
@@ -88,15 +88,15 @@ const Slider = () => {
             sizes="100vw"
             priority={true}
             key={currentIndex}
-            alt={sliderImages[currentIndex].name}
-            src={sliderImages[currentIndex].url}
+            alt={images[currentIndex].alt}
+            src={images[currentIndex].src}
           />
         </motion.div>
       </AnimatePresence>
 
       {/* Images for md and lg screens */}
       <div className="hidden md:flex h-full space-x-4">
-        {sliderImages.map((image, index) => (
+        {images.map((image, index) => (
           <div
             key={index}
             className={`
@@ -107,8 +107,8 @@ const Slider = () => {
             `}
           >
             <Image
-              src={image.url}
-              alt={image.name}
+              src={image.src}
+              alt={image.alt}
               priority={true}
               fill
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -163,7 +163,7 @@ const Slider = () => {
 
           {/* slider dots */}
           <div className="flex space-x-3">
-            {sliderImages.map((_, index) => (
+            {images.map((_, index) => (
               <div
                 key={index}
                 onClick={() => handleDotClick(index)}
@@ -178,4 +178,5 @@ const Slider = () => {
     </section>
   );
 };
+
 export default Slider;
